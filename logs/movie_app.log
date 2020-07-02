@@ -1,0 +1,442 @@
+2020-07-02 13:05:06,472 INFO [main] r.c.m.Application [StartupInfoLogger.java:55] Starting Application on COMP2375 with PID 21904 (C:\Users\levchugov\IdeaProjects\ExampleApplication\build\classes\java\main started by levchugov in C:\Users\levchugov\IdeaProjects\ExampleApplication)
+2020-07-02 13:05:06,476 INFO [main] r.c.m.Application [SpringApplication.java:651] No active profile set, falling back to default profiles: default
+2020-07-02 13:05:07,394 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:127] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-07-02 13:05:07,539 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:187] Finished Spring Data repository scanning in 129ms. Found 2 JPA repository interfaces.
+2020-07-02 13:05:07,993 INFO [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java:330] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-02 13:05:08,387 INFO [main] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:92] Tomcat initialized with port(s): 8080 (http)
+2020-07-02 13:05:08,399 INFO [main] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Initializing ProtocolHandler ["http-nio-8080"]
+2020-07-02 13:05:08,400 INFO [main] o.a.c.c.StandardService [DirectJDKLog.java:173] Starting service [Tomcat]
+2020-07-02 13:05:08,400 INFO [main] o.a.c.c.StandardEngine [DirectJDKLog.java:173] Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-07-02 13:05:08,575 INFO [main] o.a.c.c.C.[.[.[/] [DirectJDKLog.java:173] Initializing Spring embedded WebApplicationContext
+2020-07-02 13:05:08,576 INFO [main] o.s.w.c.ContextLoader [ServletWebServerApplicationContext.java:284] Root WebApplicationContext: initialization completed in 2041 ms
+2020-07-02 13:05:08,778 INFO [main] c.z.h.HikariDataSource [HikariDataSource.java:110] HikariPool-1 - Starting...
+2020-07-02 13:05:09,013 INFO [main] c.z.h.HikariDataSource [HikariDataSource.java:123] HikariPool-1 - Start completed.
+2020-07-02 13:05:09,100 INFO [main] o.h.j.i.u.LogHelper [LogHelper.java:31] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-07-02 13:05:09,216 INFO [main] o.h.Version [Version.java:46] HHH000412: Hibernate Core {5.4.9.Final}
+2020-07-02 13:05:09,416 INFO [main] o.h.a.c.Version [JavaReflectionManager.java:49] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-07-02 13:05:09,554 INFO [main] o.h.d.Dialect [Dialect.java:172] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2020-07-02 13:05:10,567 INFO [main] o.h.e.t.j.p.i.JtaPlatformInitiator [JtaPlatformInitiator.java:52] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-07-02 13:05:10,576 INFO [main] o.s.o.j.LocalContainerEntityManagerFactoryBean [AbstractEntityManagerFactoryBean.java:416] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-07-02 13:05:10,976 WARN [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [JpaBaseConfiguration.java:220] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-07-02 13:05:11,134 INFO [main] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java:171] Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-02 13:05:11,378 INFO [main] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Starting ProtocolHandler ["http-nio-8080"]
+2020-07-02 13:05:11,409 INFO [main] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:204] Tomcat started on port(s): 8080 (http) with context path ''
+2020-07-02 13:05:11,414 INFO [main] r.c.m.Application [StartupInfoLogger.java:61] Started Application in 5.349 seconds (JVM running for 6.815)
+2020-07-02 13:06:31,948 INFO [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/] [DirectJDKLog.java:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-07-02 13:06:31,949 INFO [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:525] Initializing Servlet 'dispatcherServlet'
+2020-07-02 13:06:31,963 INFO [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:547] Completed initialization in 13 ms
+2020-07-02 13:06:51,936 INFO [http-nio-8080-exec-3] r.c.m.c.MovieController [MovieController.java:24] Получен запрос на добавление нового фильма Movie(id=4, title=The Dark Knight, year=2008, director=C. Nolan) в бд
+2020-07-02 13:13:37,592 INFO [main] r.c.m.Application [StartupInfoLogger.java:55] Starting Application on COMP2375 with PID 20220 (C:\Users\levchugov\IdeaProjects\ExampleApplication\build\classes\java\main started by levchugov in C:\Users\levchugov\IdeaProjects\ExampleApplication)
+2020-07-02 13:13:37,596 INFO [main] r.c.m.Application [SpringApplication.java:651] No active profile set, falling back to default profiles: default
+2020-07-02 13:13:38,531 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:127] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-07-02 13:13:38,620 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:187] Finished Spring Data repository scanning in 76ms. Found 2 JPA repository interfaces.
+2020-07-02 13:13:39,010 INFO [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java:330] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-02 13:13:39,321 INFO [main] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:92] Tomcat initialized with port(s): 8080 (http)
+2020-07-02 13:13:39,332 INFO [main] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Initializing ProtocolHandler ["http-nio-8080"]
+2020-07-02 13:13:39,333 INFO [main] o.a.c.c.StandardService [DirectJDKLog.java:173] Starting service [Tomcat]
+2020-07-02 13:13:39,333 INFO [main] o.a.c.c.StandardEngine [DirectJDKLog.java:173] Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-07-02 13:13:39,485 INFO [main] o.a.c.c.C.[.[.[/] [DirectJDKLog.java:173] Initializing Spring embedded WebApplicationContext
+2020-07-02 13:13:39,485 INFO [main] o.s.w.c.ContextLoader [ServletWebServerApplicationContext.java:284] Root WebApplicationContext: initialization completed in 1832 ms
+2020-07-02 13:13:39,639 INFO [main] c.z.h.HikariDataSource [HikariDataSource.java:110] HikariPool-1 - Starting...
+2020-07-02 13:13:39,816 INFO [main] c.z.h.HikariDataSource [HikariDataSource.java:123] HikariPool-1 - Start completed.
+2020-07-02 13:13:39,882 INFO [main] o.h.j.i.u.LogHelper [LogHelper.java:31] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-07-02 13:13:39,991 INFO [main] o.h.Version [Version.java:46] HHH000412: Hibernate Core {5.4.9.Final}
+2020-07-02 13:13:40,180 INFO [main] o.h.a.c.Version [JavaReflectionManager.java:49] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-07-02 13:13:40,308 INFO [main] o.h.d.Dialect [Dialect.java:172] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2020-07-02 13:13:41,334 INFO [main] o.h.e.t.j.p.i.JtaPlatformInitiator [JtaPlatformInitiator.java:52] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-07-02 13:13:41,353 INFO [main] o.s.o.j.LocalContainerEntityManagerFactoryBean [AbstractEntityManagerFactoryBean.java:416] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-07-02 13:13:41,751 WARN [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [JpaBaseConfiguration.java:220] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-07-02 13:13:41,967 INFO [main] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java:171] Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-02 13:13:42,246 INFO [main] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Starting ProtocolHandler ["http-nio-8080"]
+2020-07-02 13:13:42,275 INFO [main] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:204] Tomcat started on port(s): 8080 (http) with context path ''
+2020-07-02 13:13:42,279 INFO [main] r.c.m.Application [StartupInfoLogger.java:61] Started Application in 5.108 seconds (JVM running for 6.798)
+2020-07-02 13:13:51,368 INFO [http-nio-8080-exec-2] o.a.c.c.C.[.[.[/] [DirectJDKLog.java:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-07-02 13:13:51,369 INFO [http-nio-8080-exec-2] o.s.w.s.DispatcherServlet [FrameworkServlet.java:525] Initializing Servlet 'dispatcherServlet'
+2020-07-02 13:13:51,383 INFO [http-nio-8080-exec-2] o.s.w.s.DispatcherServlet [FrameworkServlet.java:547] Completed initialization in 14 ms
+2020-07-02 13:13:51,884 INFO [http-nio-8080-exec-2] r.c.m.c.MovieController [MovieController.java:33] Получен запрос на просмотр информации о фильмах.
+2020-07-02 13:14:20,224 INFO [http-nio-8080-exec-3] r.c.m.c.UserController [UserController.java:33] Получен запрос на просмотр информации о пользователях.
+2020-07-02 13:15:40,634 INFO [http-nio-8080-exec-6] r.c.m.c.UserController [UserController.java:24] Получен запрос на добавление нового пользователя User(id=10, name=Stepa, fullName=Stepanov, email=someemail@somedomen.ru, moviesToWatch=null).
+2020-07-02 13:15:48,931 INFO [http-nio-8080-exec-7] r.c.m.c.UserController [UserController.java:33] Получен запрос на просмотр информации о пользователях.
+2020-07-02 13:16:05,558 WARN [http-nio-8080-exec-8] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:199] Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required int parameter 'movie_id' is not present]
+2020-07-02 13:16:19,242 INFO [http-nio-8080-exec-10] r.c.m.c.CommonController [CommonController.java:32] Получен запрос от пользователя User(id=10, name=Stepa, fullName=Stepanov, email=someemail@somedomen.ru, moviesToWatch=[Movie(id=1, title=Pulp Fiction, year=1994, director=Q. Tarantino)]) на добавление фильма Movie(id=1, title=Pulp Fiction, year=1994, director=Q. Tarantino) для просмотра. 
+2020-07-02 13:16:28,094 INFO [http-nio-8080-exec-1] r.c.m.c.UserController [UserController.java:33] Получен запрос на просмотр информации о пользователях.
+2020-07-02 13:24:00,687 INFO [http-nio-8080-exec-5] r.c.m.c.UserController [UserController.java:33] Получен запрос на просмотр информации о пользователях.
+2020-07-02 13:24:13,805 INFO [http-nio-8080-exec-10] r.c.m.c.UserController [UserController.java:33] Получен запрос на просмотр информации о пользователях.
+2020-07-02 13:24:35,085 INFO [http-nio-8080-exec-10] r.c.m.c.UserController [UserController.java:33] Получен запрос на просмотр информации о пользователях.
+2020-07-02 13:24:35,687 INFO [http-nio-8080-exec-1] r.c.m.c.UserController [UserController.java:33] Получен запрос на просмотр информации о пользователях.
+2020-07-02 13:24:42,460 INFO [http-nio-8080-exec-5] r.c.m.c.UserController [UserController.java:33] Получен запрос на просмотр информации о пользователях.
+2020-07-02 13:24:43,128 INFO [http-nio-8080-exec-6] r.c.m.c.UserController [UserController.java:33] Получен запрос на просмотр информации о пользователях.
+2020-07-02 13:24:48,213 INFO [http-nio-8080-exec-9] r.c.m.c.UserController [UserController.java:33] Получен запрос на просмотр информации о пользователях.
+2020-07-02 13:25:39,975 WARN [http-nio-8080-exec-7] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:199] Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required int parameter 'movie_id' is not present]
+2020-07-02 13:25:41,893 WARN [http-nio-8080-exec-9] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:199] Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required int parameter 'movie_id' is not present]
+2020-07-02 13:25:59,668 INFO [main] r.c.m.Application [StartupInfoLogger.java:55] Starting Application on COMP2375 with PID 25368 (C:\Users\levchugov\IdeaProjects\ExampleApplication\build\classes\java\main started by levchugov in C:\Users\levchugov\IdeaProjects\ExampleApplication)
+2020-07-02 13:25:59,671 INFO [main] r.c.m.Application [SpringApplication.java:651] No active profile set, falling back to default profiles: default
+2020-07-02 13:26:00,674 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:127] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-07-02 13:26:00,784 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:187] Finished Spring Data repository scanning in 99ms. Found 2 JPA repository interfaces.
+2020-07-02 13:26:01,241 INFO [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java:330] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-02 13:26:01,635 INFO [main] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:92] Tomcat initialized with port(s): 8080 (http)
+2020-07-02 13:26:01,652 INFO [main] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Initializing ProtocolHandler ["http-nio-8080"]
+2020-07-02 13:26:01,653 INFO [main] o.a.c.c.StandardService [DirectJDKLog.java:173] Starting service [Tomcat]
+2020-07-02 13:26:01,653 INFO [main] o.a.c.c.StandardEngine [DirectJDKLog.java:173] Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-07-02 13:26:01,842 INFO [main] o.a.c.c.C.[.[.[/] [DirectJDKLog.java:173] Initializing Spring embedded WebApplicationContext
+2020-07-02 13:26:01,842 INFO [main] o.s.w.c.ContextLoader [ServletWebServerApplicationContext.java:284] Root WebApplicationContext: initialization completed in 2110 ms
+2020-07-02 13:26:02,027 INFO [main] c.z.h.HikariDataSource [HikariDataSource.java:110] HikariPool-1 - Starting...
+2020-07-02 13:26:02,320 INFO [main] c.z.h.HikariDataSource [HikariDataSource.java:123] HikariPool-1 - Start completed.
+2020-07-02 13:26:02,400 INFO [main] o.h.j.i.u.LogHelper [LogHelper.java:31] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-07-02 13:26:02,518 INFO [main] o.h.Version [Version.java:46] HHH000412: Hibernate Core {5.4.9.Final}
+2020-07-02 13:26:02,755 INFO [main] o.h.a.c.Version [JavaReflectionManager.java:49] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-07-02 13:26:02,953 INFO [main] o.h.d.Dialect [Dialect.java:172] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2020-07-02 13:26:04,141 INFO [main] o.h.e.t.j.p.i.JtaPlatformInitiator [JtaPlatformInitiator.java:52] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-07-02 13:26:04,157 INFO [main] o.s.o.j.LocalContainerEntityManagerFactoryBean [AbstractEntityManagerFactoryBean.java:416] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-07-02 13:26:04,759 WARN [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [JpaBaseConfiguration.java:220] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-07-02 13:26:05,048 INFO [main] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java:171] Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-02 13:26:05,333 INFO [main] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Starting ProtocolHandler ["http-nio-8080"]
+2020-07-02 13:26:05,363 INFO [main] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:204] Tomcat started on port(s): 8080 (http) with context path ''
+2020-07-02 13:26:05,369 INFO [main] r.c.m.Application [StartupInfoLogger.java:61] Started Application in 6.138 seconds (JVM running for 7.785)
+2020-07-02 13:26:09,348 INFO [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/] [DirectJDKLog.java:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-07-02 13:26:09,349 INFO [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:525] Initializing Servlet 'dispatcherServlet'
+2020-07-02 13:26:09,360 INFO [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:547] Completed initialization in 10 ms
+2020-07-02 13:26:09,594 INFO [http-nio-8080-exec-1] r.c.m.c.UserController [UserController.java:33] Получен запрос на просмотр информации о пользователях.
+2020-07-02 13:26:26,317 INFO [http-nio-8080-exec-6] r.c.m.c.UserController [UserController.java:33] Получен запрос на просмотр информации о пользователях.
+2020-07-02 13:27:36,987 INFO [http-nio-8080-exec-2] r.c.m.c.UserController [UserController.java:33] Получен запрос на просмотр информации о пользователях.
+2020-07-02 13:29:09,298 INFO [http-nio-8080-exec-8] r.c.m.c.CommonController [CommonController.java:32] Получен запрос от пользователя User(id=10, name=Stepa, fullName=Stepanov, email=someemail@somedomen.ru, moviesToWatch=[Movie(id=1, title=Pulp Fiction, year=1994, director=Q. Tarantino)]) на добавление фильма Movie(id=1, title=Pulp Fiction, year=1994, director=Q. Tarantino) для просмотра. 
+2020-07-02 13:29:11,078 INFO [http-nio-8080-exec-9] r.c.m.c.CommonController [CommonController.java:32] Получен запрос от пользователя User(id=10, name=Stepa, fullName=Stepanov, email=someemail@somedomen.ru, moviesToWatch=[Movie(id=2, title=Kill Bill, year=2003, director=Q. Tarantino), Movie(id=1, title=Pulp Fiction, year=1994, director=Q. Tarantino)]) на добавление фильма Movie(id=2, title=Kill Bill, year=2003, director=Q. Tarantino) для просмотра. 
+2020-07-02 13:29:12,131 INFO [http-nio-8080-exec-10] r.c.m.c.CommonController [CommonController.java:32] Получен запрос от пользователя User(id=10, name=Stepa, fullName=Stepanov, email=someemail@somedomen.ru, moviesToWatch=[Movie(id=2, title=Kill Bill, year=2003, director=Q. Tarantino), Movie(id=3, title=The Grand Budapest Hotel, year=2014, director=W. Anderson), Movie(id=1, title=Pulp Fiction, year=1994, director=Q. Tarantino)]) на добавление фильма Movie(id=3, title=The Grand Budapest Hotel, year=2014, director=W. Anderson) для просмотра. 
+2020-07-02 13:29:15,251 INFO [http-nio-8080-exec-2] r.c.m.c.CommonController [CommonController.java:32] Получен запрос от пользователя User(id=10, name=Stepa, fullName=Stepanov, email=someemail@somedomen.ru, moviesToWatch=[Movie(id=4, title=The Dark Knight, year=2008, director=C. Nolan), Movie(id=2, title=Kill Bill, year=2003, director=Q. Tarantino), Movie(id=3, title=The Grand Budapest Hotel, year=2014, director=W. Anderson), Movie(id=1, title=Pulp Fiction, year=1994, director=Q. Tarantino)]) на добавление фильма Movie(id=4, title=The Dark Knight, year=2008, director=C. Nolan) для просмотра. 
+2020-07-02 13:29:17,060 WARN [http-nio-8080-exec-1] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:199] Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'int'; nested exception is java.lang.NumberFormatException: For input string: ""]
+2020-07-02 13:29:18,890 ERROR [http-nio-8080-exec-5] o.a.c.c.C.[.[.[.[dispatcherServlet] [DirectJDKLog.java:175] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.util.NoSuchElementException: No value present] with root cause
+java.util.NoSuchElementException: No value present
+	at java.base/java.util.Optional.get(Optional.java:148)
+	at ru.cft.movieapp.service.impl.MovieServiceImpl.findById(MovieServiceImpl.java:30)
+	at ru.cft.movieapp.controller.CommonController.addMovie(CommonController.java:28)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:888)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1591)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2020-07-02 13:29:26,896 INFO [http-nio-8080-exec-7] r.c.m.c.UserController [UserController.java:33] Получен запрос на просмотр информации о пользователях.
+2020-07-02 13:30:19,228 INFO [main] r.c.m.Application [StartupInfoLogger.java:55] Starting Application on COMP2375 with PID 24588 (C:\Users\levchugov\IdeaProjects\ExampleApplication\build\classes\java\main started by levchugov in C:\Users\levchugov\IdeaProjects\ExampleApplication)
+2020-07-02 13:30:19,233 INFO [main] r.c.m.Application [SpringApplication.java:651] No active profile set, falling back to default profiles: default
+2020-07-02 13:30:20,286 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:127] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-07-02 13:30:20,384 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:187] Finished Spring Data repository scanning in 86ms. Found 2 JPA repository interfaces.
+2020-07-02 13:30:20,776 INFO [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java:330] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-02 13:30:21,180 INFO [main] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:92] Tomcat initialized with port(s): 8080 (http)
+2020-07-02 13:30:21,192 INFO [main] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Initializing ProtocolHandler ["http-nio-8080"]
+2020-07-02 13:30:21,193 INFO [main] o.a.c.c.StandardService [DirectJDKLog.java:173] Starting service [Tomcat]
+2020-07-02 13:30:21,193 INFO [main] o.a.c.c.StandardEngine [DirectJDKLog.java:173] Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-07-02 13:30:21,378 INFO [main] o.a.c.c.C.[.[.[/] [DirectJDKLog.java:173] Initializing Spring embedded WebApplicationContext
+2020-07-02 13:30:21,379 INFO [main] o.s.w.c.ContextLoader [ServletWebServerApplicationContext.java:284] Root WebApplicationContext: initialization completed in 2055 ms
+2020-07-02 13:30:21,557 INFO [main] c.z.h.HikariDataSource [HikariDataSource.java:110] HikariPool-1 - Starting...
+2020-07-02 13:30:21,759 INFO [main] c.z.h.HikariDataSource [HikariDataSource.java:123] HikariPool-1 - Start completed.
+2020-07-02 13:30:21,856 INFO [main] o.h.j.i.u.LogHelper [LogHelper.java:31] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-07-02 13:30:22,000 INFO [main] o.h.Version [Version.java:46] HHH000412: Hibernate Core {5.4.9.Final}
+2020-07-02 13:30:22,223 INFO [main] o.h.a.c.Version [JavaReflectionManager.java:49] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-07-02 13:30:22,434 INFO [main] o.h.d.Dialect [Dialect.java:172] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2020-07-02 13:30:23,643 INFO [main] o.h.e.t.j.p.i.JtaPlatformInitiator [JtaPlatformInitiator.java:52] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-07-02 13:30:23,656 INFO [main] o.s.o.j.LocalContainerEntityManagerFactoryBean [AbstractEntityManagerFactoryBean.java:416] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-07-02 13:30:24,086 WARN [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [JpaBaseConfiguration.java:220] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-07-02 13:30:24,301 INFO [main] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java:171] Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-02 13:30:24,580 INFO [main] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Starting ProtocolHandler ["http-nio-8080"]
+2020-07-02 13:30:24,615 INFO [main] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:204] Tomcat started on port(s): 8080 (http) with context path ''
+2020-07-02 13:30:24,621 INFO [main] r.c.m.Application [StartupInfoLogger.java:61] Started Application in 5.859 seconds (JVM running for 7.359)
+2020-07-02 13:30:35,870 INFO [http-nio-8080-exec-2] o.a.c.c.C.[.[.[/] [DirectJDKLog.java:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-07-02 13:30:35,872 INFO [http-nio-8080-exec-2] o.s.w.s.DispatcherServlet [FrameworkServlet.java:525] Initializing Servlet 'dispatcherServlet'
+2020-07-02 13:30:35,885 INFO [http-nio-8080-exec-2] o.s.w.s.DispatcherServlet [FrameworkServlet.java:547] Completed initialization in 12 ms
+2020-07-02 13:30:36,037 INFO [http-nio-8080-exec-2] r.c.m.c.UserController [UserController.java:44] Получен запрос на просмотр информации о пользователе User(id=10, name=Stepa, fullName=Stepanov, email=someemail@somedomen.ru, moviesToWatch=[Movie(id=4, title=The Dark Knight, year=2008, director=C. Nolan), Movie(id=2, title=Kill Bill, year=2003, director=Q. Tarantino), Movie(id=3, title=The Grand Budapest Hotel, year=2014, director=W. Anderson), Movie(id=1, title=Pulp Fiction, year=1994, director=Q. Tarantino)]).
+2020-07-02 13:31:20,500 INFO [http-nio-8080-exec-4] r.c.m.c.CommonController [CommonController.java:49] Получен запрос от пользователя User(id=10, name=Stepa, fullName=Stepanov, email=someemail@somedomen.ru, moviesToWatch=[Movie(id=4, title=The Dark Knight, year=2008, director=C. Nolan), Movie(id=2, title=Kill Bill, year=2003, director=Q. Tarantino), Movie(id=3, title=The Grand Budapest Hotel, year=2014, director=W. Anderson)]) на удаление фильма Movie(id=1, title=Pulp Fiction, year=1994, director=Q. Tarantino) из списка для просмотра. 
+2020-07-02 15:08:54,242 INFO [main] r.c.m.Application [StartupInfoLogger.java:55] Starting Application on COMP2375 with PID 26476 (C:\Users\levchugov\IdeaProjects\ExampleApplication\build\classes\java\main started by levchugov in C:\Users\levchugov\IdeaProjects\ExampleApplication)
+2020-07-02 15:08:54,246 INFO [main] r.c.m.Application [SpringApplication.java:651] No active profile set, falling back to default profiles: default
+2020-07-02 15:08:55,207 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:127] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-07-02 15:08:55,291 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:187] Finished Spring Data repository scanning in 75ms. Found 2 JPA repository interfaces.
+2020-07-02 15:08:55,663 INFO [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java:330] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-02 15:08:56,022 INFO [main] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:92] Tomcat initialized with port(s): 8080 (http)
+2020-07-02 15:08:56,034 INFO [main] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Initializing ProtocolHandler ["http-nio-8080"]
+2020-07-02 15:08:56,035 INFO [main] o.a.c.c.StandardService [DirectJDKLog.java:173] Starting service [Tomcat]
+2020-07-02 15:08:56,036 INFO [main] o.a.c.c.StandardEngine [DirectJDKLog.java:173] Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-07-02 15:08:56,243 INFO [main] o.a.c.c.C.[.[.[/] [DirectJDKLog.java:173] Initializing Spring embedded WebApplicationContext
+2020-07-02 15:08:56,244 INFO [main] o.s.w.c.ContextLoader [ServletWebServerApplicationContext.java:284] Root WebApplicationContext: initialization completed in 1943 ms
+2020-07-02 15:08:56,368 INFO [main] c.z.h.HikariDataSource [HikariDataSource.java:110] HikariPool-1 - Starting...
+2020-07-02 15:08:56,634 INFO [main] c.z.h.HikariDataSource [HikariDataSource.java:123] HikariPool-1 - Start completed.
+2020-07-02 15:08:56,687 WARN [main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext [AbstractApplicationContext.java:558] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration': Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker': Invocation of init method failed; nested exception is org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #2 of URL [file:/C:/Users/levchugov/IdeaProjects/ExampleApplication/build/resources/main/database/initDB.sql]: CREATE SEQUENCE movies_id_seq START WITH 1 INCREMENT BY 1; nested exception is org.postgresql.util.PSQLException: ОШИБКА: отношение "movies_id_seq" уже существует
+2020-07-02 15:08:56,693 INFO [main] o.a.c.c.StandardService [DirectJDKLog.java:173] Stopping service [Tomcat]
+2020-07-02 15:08:56,716 INFO [main] o.s.b.a.l.ConditionEvaluationReportLoggingListener [ConditionEvaluationReportLoggingListener.java:136] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-07-02 15:08:56,735 ERROR [main] o.s.b.SpringApplication [SpringApplication.java:826] Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration': Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker': Invocation of init method failed; nested exception is org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #2 of URL [file:/C:/Users/levchugov/IdeaProjects/ExampleApplication/build/resources/main/database/initDB.sql]: CREATE SEQUENCE movies_id_seq START WITH 1 INCREMENT BY 1; nested exception is org.postgresql.util.PSQLException: ОШИБКА: отношение "movies_id_seq" уже существует
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:798)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:228)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1358)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1204)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:409)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1338)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1108)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:868)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at ru.cft.movieapp.Application.main(Application.java:9)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker': Invocation of init method failed; nested exception is org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #2 of URL [file:/C:/Users/levchugov/IdeaProjects/ExampleApplication/build/resources/main/database/initDB.sql]: CREATE SEQUENCE movies_id_seq START WITH 1 INCREMENT BY 1; nested exception is org.postgresql.util.PSQLException: ОШИБКА: отношение "movies_id_seq" уже существует
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1287)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1207)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:885)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:789)
+	... 28 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker': Invocation of init method failed; nested exception is org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #2 of URL [file:/C:/Users/levchugov/IdeaProjects/ExampleApplication/build/resources/main/database/initDB.sql]: CREATE SEQUENCE movies_id_seq START WITH 1 INCREMENT BY 1; nested exception is org.postgresql.util.PSQLException: ОШИБКА: отношение "movies_id_seq" уже существует
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1796)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:227)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveNamedBean(DefaultListableBeanFactory.java:1155)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveBean(DefaultListableBeanFactory.java:416)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBean(DefaultListableBeanFactory.java:349)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBean(DefaultListableBeanFactory.java:342)
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerPostProcessor.postProcessAfterInitialization(DataSourceInitializerPostProcessor.java:52)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595)
+	... 38 common frames omitted
+Caused by: org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #2 of URL [file:/C:/Users/levchugov/IdeaProjects/ExampleApplication/build/resources/main/database/initDB.sql]: CREATE SEQUENCE movies_id_seq START WITH 1 INCREMENT BY 1; nested exception is org.postgresql.util.PSQLException: ОШИБКА: отношение "movies_id_seq" уже существует
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:626)
+	at org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.populate(ResourceDatabasePopulator.java:254)
+	at org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:49)
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceInitializer.runScripts(DataSourceInitializer.java:202)
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceInitializer.createSchema(DataSourceInitializer.java:101)
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker.afterPropertiesSet(DataSourceInitializerInvoker.java:63)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1855)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1792)
+	... 52 common frames omitted
+Caused by: org.postgresql.util.PSQLException: ОШИБКА: отношение "movies_id_seq" уже существует
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:310)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:296)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:273)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:268)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:605)
+	... 59 common frames omitted
+2020-07-02 15:09:32,589 INFO [main] r.c.m.Application [StartupInfoLogger.java:55] Starting Application on COMP2375 with PID 25872 (C:\Users\levchugov\IdeaProjects\ExampleApplication\build\classes\java\main started by levchugov in C:\Users\levchugov\IdeaProjects\ExampleApplication)
+2020-07-02 15:09:32,593 INFO [main] r.c.m.Application [SpringApplication.java:651] No active profile set, falling back to default profiles: default
+2020-07-02 15:09:33,468 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:127] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-07-02 15:09:33,569 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:187] Finished Spring Data repository scanning in 90ms. Found 2 JPA repository interfaces.
+2020-07-02 15:09:33,945 INFO [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java:330] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-02 15:09:34,274 INFO [main] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:92] Tomcat initialized with port(s): 8080 (http)
+2020-07-02 15:09:34,286 INFO [main] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Initializing ProtocolHandler ["http-nio-8080"]
+2020-07-02 15:09:34,287 INFO [main] o.a.c.c.StandardService [DirectJDKLog.java:173] Starting service [Tomcat]
+2020-07-02 15:09:34,287 INFO [main] o.a.c.c.StandardEngine [DirectJDKLog.java:173] Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-07-02 15:09:34,438 INFO [main] o.a.c.c.C.[.[.[/] [DirectJDKLog.java:173] Initializing Spring embedded WebApplicationContext
+2020-07-02 15:09:34,439 INFO [main] o.s.w.c.ContextLoader [ServletWebServerApplicationContext.java:284] Root WebApplicationContext: initialization completed in 1759 ms
+2020-07-02 15:09:34,603 INFO [main] c.z.h.HikariDataSource [HikariDataSource.java:110] HikariPool-1 - Starting...
+2020-07-02 15:09:34,808 INFO [main] c.z.h.HikariDataSource [HikariDataSource.java:123] HikariPool-1 - Start completed.
+2020-07-02 15:09:34,860 INFO [main] o.h.j.i.u.LogHelper [LogHelper.java:31] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-07-02 15:09:34,946 INFO [main] o.h.Version [Version.java:46] HHH000412: Hibernate Core {5.4.9.Final}
+2020-07-02 15:09:35,128 INFO [main] o.h.a.c.Version [JavaReflectionManager.java:49] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-07-02 15:09:35,264 INFO [main] o.h.d.Dialect [Dialect.java:172] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2020-07-02 15:09:36,351 INFO [main] o.h.e.t.j.p.i.JtaPlatformInitiator [JtaPlatformInitiator.java:52] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-07-02 15:09:36,361 INFO [main] o.s.o.j.LocalContainerEntityManagerFactoryBean [AbstractEntityManagerFactoryBean.java:416] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-07-02 15:09:36,790 WARN [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [JpaBaseConfiguration.java:220] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-07-02 15:09:36,933 INFO [main] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java:171] Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-02 15:09:37,336 INFO [main] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Starting ProtocolHandler ["http-nio-8080"]
+2020-07-02 15:09:37,378 INFO [main] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:204] Tomcat started on port(s): 8080 (http) with context path ''
+2020-07-02 15:09:37,385 INFO [main] r.c.m.Application [StartupInfoLogger.java:61] Started Application in 5.184 seconds (JVM running for 6.583)
+2020-07-02 15:09:44,686 INFO [http-nio-8080-exec-2] o.a.c.c.C.[.[.[/] [DirectJDKLog.java:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-07-02 15:09:44,687 INFO [http-nio-8080-exec-2] o.s.w.s.DispatcherServlet [FrameworkServlet.java:525] Initializing Servlet 'dispatcherServlet'
+2020-07-02 15:09:44,701 INFO [http-nio-8080-exec-2] o.s.w.s.DispatcherServlet [FrameworkServlet.java:547] Completed initialization in 13 ms
+2020-07-02 15:09:45,063 INFO [http-nio-8080-exec-2] r.c.m.c.UserController [UserController.java:33] Получен запрос на просмотр информации о пользователях.
+2020-07-02 15:12:51,819 INFO [http-nio-8080-exec-5] r.c.m.c.MovieController [MovieController.java:33] Получен запрос на просмотр информации о фильмах.
+2020-07-02 15:15:06,931 INFO [http-nio-8080-exec-8] r.c.m.c.MovieController [MovieController.java:24] Получен запрос на добавление нового фильма Movie(id=5, title=The Social Network, year=2010, director=D. Fincher) в б/д.
+2020-07-02 15:15:11,493 INFO [http-nio-8080-exec-9] r.c.m.c.MovieController [MovieController.java:33] Получен запрос на просмотр информации о фильмах.
+2020-07-02 15:15:26,883 INFO [http-nio-8080-exec-10] r.c.m.c.UserController [UserController.java:33] Получен запрос на просмотр информации о пользователях.
+2020-07-02 15:20:08,114 INFO [main] r.c.m.Application [StartupInfoLogger.java:55] Starting Application on COMP2375 with PID 5592 (C:\Users\levchugov\IdeaProjects\ExampleApplication\build\classes\java\main started by levchugov in C:\Users\levchugov\IdeaProjects\ExampleApplication)
+2020-07-02 15:20:08,119 INFO [main] r.c.m.Application [SpringApplication.java:651] No active profile set, falling back to default profiles: default
+2020-07-02 15:20:09,036 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:127] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-07-02 15:20:09,196 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:187] Finished Spring Data repository scanning in 150ms. Found 2 JPA repository interfaces.
+2020-07-02 15:20:09,683 INFO [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java:330] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-02 15:20:10,428 INFO [main] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:92] Tomcat initialized with port(s): 8080 (http)
+2020-07-02 15:20:10,441 INFO [main] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Initializing ProtocolHandler ["http-nio-8080"]
+2020-07-02 15:20:10,441 INFO [main] o.a.c.c.StandardService [DirectJDKLog.java:173] Starting service [Tomcat]
+2020-07-02 15:20:10,441 INFO [main] o.a.c.c.StandardEngine [DirectJDKLog.java:173] Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-07-02 15:20:10,616 INFO [main] o.a.c.c.C.[.[.[/] [DirectJDKLog.java:173] Initializing Spring embedded WebApplicationContext
+2020-07-02 15:20:10,616 INFO [main] o.s.w.c.ContextLoader [ServletWebServerApplicationContext.java:284] Root WebApplicationContext: initialization completed in 2429 ms
+2020-07-02 15:20:10,793 INFO [main] c.z.h.HikariDataSource [HikariDataSource.java:110] HikariPool-1 - Starting...
+2020-07-02 15:20:10,967 INFO [main] c.z.h.HikariDataSource [HikariDataSource.java:123] HikariPool-1 - Start completed.
+2020-07-02 15:20:11,024 INFO [main] o.h.j.i.u.LogHelper [LogHelper.java:31] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-07-02 15:20:11,147 INFO [main] o.h.Version [Version.java:46] HHH000412: Hibernate Core {5.4.9.Final}
+2020-07-02 15:20:11,356 INFO [main] o.h.a.c.Version [JavaReflectionManager.java:49] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-07-02 15:20:11,547 INFO [main] o.h.d.Dialect [Dialect.java:172] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2020-07-02 15:20:12,856 INFO [main] o.h.e.t.j.p.i.JtaPlatformInitiator [JtaPlatformInitiator.java:52] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-07-02 15:20:12,884 INFO [main] o.s.o.j.LocalContainerEntityManagerFactoryBean [AbstractEntityManagerFactoryBean.java:416] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-07-02 15:20:13,386 WARN [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [JpaBaseConfiguration.java:220] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-07-02 15:20:13,596 INFO [main] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java:171] Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-02 15:20:13,879 INFO [main] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Starting ProtocolHandler ["http-nio-8080"]
+2020-07-02 15:20:13,908 INFO [main] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:204] Tomcat started on port(s): 8080 (http) with context path ''
+2020-07-02 15:20:13,911 INFO [main] r.c.m.Application [StartupInfoLogger.java:61] Started Application in 6.228 seconds (JVM running for 7.855)
+2020-07-02 15:20:18,460 INFO [http-nio-8080-exec-2] o.a.c.c.C.[.[.[/] [DirectJDKLog.java:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-07-02 15:20:18,461 INFO [http-nio-8080-exec-2] o.s.w.s.DispatcherServlet [FrameworkServlet.java:525] Initializing Servlet 'dispatcherServlet'
+2020-07-02 15:20:18,473 INFO [http-nio-8080-exec-2] o.s.w.s.DispatcherServlet [FrameworkServlet.java:547] Completed initialization in 12 ms
+2020-07-02 15:20:18,806 INFO [http-nio-8080-exec-2] r.c.m.c.UserController [UserController.java:33] Получен запрос на просмотр информации о пользователях.
+2020-07-02 15:21:13,571 ERROR [http-nio-8080-exec-6] o.a.c.c.C.[.[.[.[dispatcherServlet] [DirectJDKLog.java:175] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.util.NoSuchElementException: No value present] with root cause
+java.util.NoSuchElementException: No value present
+	at java.base/java.util.Optional.get(Optional.java:148)
+	at ru.cft.movieapp.service.impl.MovieServiceImpl.findById(MovieServiceImpl.java:30)
+	at ru.cft.movieapp.controller.CommonController.removeMovie(CommonController.java:45)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:888)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1591)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2020-07-02 15:21:19,478 INFO [http-nio-8080-exec-8] r.c.m.c.CommonController [CommonController.java:49] Получен запрос от пользователя User(id=10, name=Stepa, fullName=Stepanov, email=someemail@somedomen.ru, moviesToWatch=[Movie(id=2, title=Kill Bill, year=2003, director=Q. Tarantino), Movie(id=3, title=The Grand Budapest Hotel, year=2014, director=W. Anderson)], moviesWatched=[Movie(id=4, title=The Dark Knight, year=2008, director=C. Nolan)]) на удаление фильма Movie(id=4, title=The Dark Knight, year=2008, director=C. Nolan) из списка для просмотра. 
+2020-07-02 15:21:36,648 INFO [http-nio-8080-exec-9] r.c.m.c.UserController [UserController.java:44] Получен запрос на просмотр информации о пользователе User(id=10, name=Stepa, fullName=Stepanov, email=someemail@somedomen.ru, moviesToWatch=[Movie(id=2, title=Kill Bill, year=2003, director=Q. Tarantino), Movie(id=3, title=The Grand Budapest Hotel, year=2014, director=W. Anderson)], moviesWatched=[Movie(id=4, title=The Dark Knight, year=2008, director=C. Nolan)]).
+2020-07-02 15:27:46,327 INFO [main] r.l.m.Application [StartupInfoLogger.java:55] Starting Application on COMP2375 with PID 18940 (C:\Users\levchugov\IdeaProjects\ExampleApplication\build\classes\java\main started by levchugov in C:\Users\levchugov\IdeaProjects\ExampleApplication)
+2020-07-02 15:27:46,331 INFO [main] r.l.m.Application [SpringApplication.java:651] No active profile set, falling back to default profiles: default
+2020-07-02 15:27:47,179 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:127] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-07-02 15:27:47,266 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:187] Finished Spring Data repository scanning in 78ms. Found 2 JPA repository interfaces.
+2020-07-02 15:27:47,632 INFO [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java:330] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-02 15:27:47,997 INFO [main] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:92] Tomcat initialized with port(s): 8080 (http)
+2020-07-02 15:27:48,012 INFO [main] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Initializing ProtocolHandler ["http-nio-8080"]
+2020-07-02 15:27:48,013 INFO [main] o.a.c.c.StandardService [DirectJDKLog.java:173] Starting service [Tomcat]
+2020-07-02 15:27:48,013 INFO [main] o.a.c.c.StandardEngine [DirectJDKLog.java:173] Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-07-02 15:27:48,158 INFO [main] o.a.c.c.C.[.[.[/] [DirectJDKLog.java:173] Initializing Spring embedded WebApplicationContext
+2020-07-02 15:27:48,159 INFO [main] o.s.w.c.ContextLoader [ServletWebServerApplicationContext.java:284] Root WebApplicationContext: initialization completed in 1773 ms
+2020-07-02 15:27:48,320 INFO [main] c.z.h.HikariDataSource [HikariDataSource.java:110] HikariPool-1 - Starting...
+2020-07-02 15:27:48,478 INFO [main] c.z.h.HikariDataSource [HikariDataSource.java:123] HikariPool-1 - Start completed.
+2020-07-02 15:27:48,549 INFO [main] o.h.j.i.u.LogHelper [LogHelper.java:31] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-07-02 15:27:48,659 INFO [main] o.h.Version [Version.java:46] HHH000412: Hibernate Core {5.4.9.Final}
+2020-07-02 15:27:48,861 INFO [main] o.h.a.c.Version [JavaReflectionManager.java:49] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-07-02 15:27:49,007 INFO [main] o.h.d.Dialect [Dialect.java:172] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2020-07-02 15:27:50,113 INFO [main] o.h.e.t.j.p.i.JtaPlatformInitiator [JtaPlatformInitiator.java:52] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-07-02 15:27:50,124 INFO [main] o.s.o.j.LocalContainerEntityManagerFactoryBean [AbstractEntityManagerFactoryBean.java:416] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-07-02 15:27:50,490 WARN [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [JpaBaseConfiguration.java:220] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-07-02 15:27:50,680 INFO [main] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java:171] Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-02 15:27:50,918 INFO [main] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Starting ProtocolHandler ["http-nio-8080"]
+2020-07-02 15:27:50,946 INFO [main] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:204] Tomcat started on port(s): 8080 (http) with context path ''
+2020-07-02 15:27:50,950 INFO [main] r.l.m.Application [StartupInfoLogger.java:61] Started Application in 5.006 seconds (JVM running for 7.094)
+2020-07-02 15:27:56,978 INFO [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/] [DirectJDKLog.java:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-07-02 15:27:56,979 INFO [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:525] Initializing Servlet 'dispatcherServlet'
+2020-07-02 15:27:56,992 INFO [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:547] Completed initialization in 12 ms
+2020-07-02 15:27:57,160 INFO [http-nio-8080-exec-1] r.l.m.c.UserController [UserController.java:44] Получен запрос на просмотр информации о пользователе User(id=10, name=Stepa, fullName=Stepanov, email=someemail@somedomen.ru, moviesToWatch=[Movie(id=2, title=Kill Bill, year=2003, director=Q. Tarantino), Movie(id=3, title=The Grand Budapest Hotel, year=2014, director=W. Anderson)], moviesWatched=[Movie(id=4, title=The Dark Knight, year=2008, director=C. Nolan)]).
+2020-07-02 15:28:02,668 INFO [http-nio-8080-exec-3] r.l.m.c.UserController [UserController.java:33] Получен запрос на просмотр информации о пользователях.
+2020-07-02 15:29:18,253 INFO [http-nio-8080-exec-6] r.l.m.c.UserController [UserController.java:24] Получен запрос на добавление нового пользователя User(id=11, name=Jenya, fullName=Ivanov, email=ivanov@mail.ru, moviesToWatch=null, moviesWatched=null).
+2020-07-02 15:29:23,228 INFO [http-nio-8080-exec-7] r.l.m.c.UserController [UserController.java:33] Получен запрос на просмотр информации о пользователях.
