@@ -9,7 +9,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import ru.levchugov.movieapp.model.Movie;
-import ru.levchugov.movieapp.model.User;
+import ru.levchugov.movieapp.model.MovieDto;
+import ru.levchugov.movieapp.model.UserDto;
 import ru.levchugov.movieapp.service.MovieService;
 import ru.levchugov.movieapp.service.TopWatchedMoviesService;
 import ru.levchugov.movieapp.service.UserService;
@@ -28,40 +29,40 @@ public class CommonController {
     @GetMapping(value = "users/{id}/movies_to_watch")
     public ResponseEntity<?> addMovie(@PathVariable(value = "id") int userId,
                                       @RequestParam(value = "movie_id") int movieId) {
-        final User user = userService.findById(userId);
-        final Movie movie = movieService.findById(movieId);
+        final UserDto userDto = userService.findById(userId);
+        final MovieDto movie = movieService.findById(movieId);
 
-        userService.addMovieToWatch(user, movie);
+        userService.addMovieToWatch(userDto, movie);
 
         log.info("Получен запрос от пользователя {} на добавление фильма {} для просмотра. ",
-                user,
+                userDto,
                 movie);
 
-        return (movie!=null && user !=null)
-                ? new ResponseEntity<>(user, HttpStatus.OK)
+        return (movie!=null && userDto !=null)
+                ? new ResponseEntity<>(userDto, HttpStatus.OK)
                 : new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
 
     @GetMapping(value = "users/{id}/watched_movies")
     public ResponseEntity<?> removeMovie(@PathVariable(value = "id") int userId,
                                          @RequestParam(value = "movie_id") int movieId) {
-        final User user = userService.findById(userId);
-        final Movie movie = movieService.findById(movieId);
+        final UserDto userDto = userService.findById(userId);
+        final MovieDto movieDto = movieService.findById(movieId);
 
-        userService.removeMovie(user, movie);
+        userService.removeMovie(userDto, movieDto);
 
         log.info("Получен запрос от пользователя {} на удаление фильма {} из списка для просмотра. ",
-                user,
-                movie);
+                userDto,
+                movieDto);
 
-        return (movie!=null && user !=null)
-                ? new ResponseEntity<>(user, HttpStatus.OK)
+        return (movieDto!=null && userDto !=null)
+                ? new ResponseEntity<>(userDto, HttpStatus.OK)
                 : new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
 
     @GetMapping(value = "movies/top_watched_movies")
-    public ResponseEntity<List<Movie>> getTopWatchedMovies() {
-        final List<Movie> topWatchedMovies = topWatchedMoviesService.getTopWatchedMovies();
+    public ResponseEntity<List<MovieDto>> getTopWatchedMovies() {
+        final List<MovieDto> topWatchedMovies = topWatchedMoviesService.getTopWatchedMovies();
 
         return !topWatchedMovies.isEmpty()
                 ? new ResponseEntity<>(topWatchedMovies, HttpStatus.OK)

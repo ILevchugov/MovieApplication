@@ -1,15 +1,16 @@
 package ru.levchugov.movieapp.service;
 
-import ru.levchugov.movieapp.model.Movie;
+
+import ru.levchugov.movieapp.model.MovieDto;
 
 import java.util.List;
 
 public interface MovieService {
 
-    List<Movie> findAll();
+    List<MovieDto> findAll();
 
-    Movie findById(long id);
+    MovieDto findById(long id);
 
-    void add(Movie movie);
+    void add(MovieDto movie);
 
 }

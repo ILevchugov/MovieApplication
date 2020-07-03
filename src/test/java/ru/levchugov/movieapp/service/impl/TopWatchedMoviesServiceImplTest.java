@@ -5,9 +5,12 @@ import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 
+import org.modelmapper.ModelMapper;
 import org.springframework.boot.test.context.SpringBootTest;
 import ru.levchugov.movieapp.model.Movie;
+import ru.levchugov.movieapp.model.MovieDto;
 import ru.levchugov.movieapp.model.User;
+import ru.levchugov.movieapp.model.UserDto;
 import ru.levchugov.movieapp.repository.MovieRepository;
 import ru.levchugov.movieapp.repository.UserRepository;
 
@@ -20,6 +23,8 @@ import static org.mockito.Mockito.when;
 
 @SpringBootTest
 class TopWatchedMoviesServiceImplTest {
+
+    ModelMapper modelMapper = new ModelMapper();
 
     @Mock
     UserRepository userRepository;
@@ -89,8 +94,13 @@ class TopWatchedMoviesServiceImplTest {
 
     @Test
     public void test_getTopWatchedMovies() {
+        List<MovieDto> topWatchedMoviesDto = topWatchedMoviesService.getTopWatchedMovies();
+        List<Movie> topWatchedMovies = new ArrayList<>();
 
-        List<Movie> topWatchedMovies = topWatchedMoviesService.getTopWatchedMovies();
+        for (MovieDto movieDto: topWatchedMoviesDto) {
+            topWatchedMovies.add(modelMapper.map(movieDto, Movie.class ));
+        }
+
 
         assertEquals(sortedMovies, topWatchedMovies);
     }

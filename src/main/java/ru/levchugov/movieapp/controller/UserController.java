@@ -6,6 +6,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import ru.levchugov.movieapp.model.User;
+import ru.levchugov.movieapp.model.UserDto;
 import ru.levchugov.movieapp.service.UserService;
 
 import java.util.List;
@@ -18,17 +19,17 @@ public class UserController {
     private final UserService userService;
 
     @PostMapping(value = "/users")
-    public ResponseEntity<?> create(@RequestBody User user) {
-        userService.create(user);
+    public ResponseEntity<?> create(@RequestBody UserDto userDto) {
+        userService.create(userDto);
 
-        log.info("Получен запрос на добавление нового пользователя {}.", user);
+        log.info("Получен запрос на добавление нового пользователя {}.", userDto);
 
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
 
     @GetMapping(value = "/users")
-    public ResponseEntity<List<User>> read() {
-        final List<User> users = userService.readAll();
+    public ResponseEntity<List<UserDto>> read() {
+        final List<UserDto> users = userService.readAll();
 
         log.info("Получен запрос на просмотр информации о пользователях.");
 
@@ -38,13 +39,13 @@ public class UserController {
     }
 
     @GetMapping(value = "/users/{id}")
-    public ResponseEntity<User> read(@PathVariable(value = "id") int id) {
-        final User user = userService.findById(id);
+    public ResponseEntity<UserDto> read(@PathVariable(value = "id") int id) {
+        final UserDto userDto = userService.findById(id);
 
-        log.info("Получен запрос на просмотр информации о пользователе {}.", user);
+        log.info("Получен запрос на просмотр информации о пользователе {}.", userDto);
 
-        return user != null
-                ? new ResponseEntity<>(user, HttpStatus.OK)
+        return userDto != null
+                ? new ResponseEntity<>(userDto, HttpStatus.OK)
                 : new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
 

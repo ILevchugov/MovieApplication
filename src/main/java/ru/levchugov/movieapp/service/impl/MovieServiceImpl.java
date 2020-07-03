@@ -1,11 +1,16 @@
 package ru.levchugov.movieapp.service.impl;
 
 import lombok.AllArgsConstructor;
+import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 import ru.levchugov.movieapp.model.Movie;
+import ru.levchugov.movieapp.model.MovieDto;
+import ru.levchugov.movieapp.model.User;
+import ru.levchugov.movieapp.model.UserDto;
 import ru.levchugov.movieapp.repository.MovieRepository;
 import ru.levchugov.movieapp.service.MovieService;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -13,20 +18,30 @@ import java.util.List;
 public class MovieServiceImpl implements MovieService {
 
     private final MovieRepository movieRepository;
+    private final ModelMapper modelMapper = new ModelMapper();
 
     @Override
-    public void add(Movie movie) {
+    public void add(MovieDto movieDto) {
+        Movie movie = modelMapper.map(movieDto, Movie.class);
         movieRepository.save(movie);
     }
 
     @Override
-    public List<Movie> findAll() {
-       return movieRepository.findAll();
+    public List<MovieDto> findAll() {
+       List<Movie> movies = movieRepository.findAll();
+       List<MovieDto> moviesDtos = new ArrayList<>();
+
+        for (Movie movie: movies) {
+            moviesDtos.add(modelMapper.map(movie, MovieDto.class));
+        }
+
+
+        return moviesDtos;
     }
 
     @Override
-    public Movie findById(long id) {
-        return movieRepository.findById(id).get();
+    public MovieDto findById(long id) {
+        return modelMapper.map(movieRepository.findById(id).get(), MovieDto.class);
     }
 
 }

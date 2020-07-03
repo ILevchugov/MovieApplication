@@ -1,11 +1,11 @@
 package ru.levchugov.movieapp.service;
 
-import ru.levchugov.movieapp.model.Movie;
+import ru.levchugov.movieapp.model.MovieDto;
 
 import java.util.List;
 
 public interface TopWatchedMoviesService {
 
-    List<Movie> getTopWatchedMovies();
+    List<MovieDto> getTopWatchedMovies();
 
 }
