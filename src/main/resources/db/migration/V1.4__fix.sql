@@ -1,0 +1,2 @@
+DROP SEQUENCE users_id_seq;
+CREATE SEQUENCE users_id_seq START WITH 6 INCREMENT BY 1;

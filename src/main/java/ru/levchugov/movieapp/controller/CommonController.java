@@ -11,7 +11,10 @@ import org.springframework.web.bind.annotation.RestController;
 import ru.levchugov.movieapp.model.Movie;
 import ru.levchugov.movieapp.model.User;
 import ru.levchugov.movieapp.service.MovieService;
+import ru.levchugov.movieapp.service.TopWatchedMoviesService;
 import ru.levchugov.movieapp.service.UserService;
+
+import java.util.List;
 
 @Slf4j
 @RestController
@@ -20,6 +23,7 @@ public class CommonController {
 
     private final UserService userService;
     private final MovieService movieService;
+    private final TopWatchedMoviesService topWatchedMoviesService;
 
     @GetMapping(value = "users/{id}/movies_to_watch")
     public ResponseEntity<?> addMovie(@PathVariable(value = "id") int userId,
@@ -52,6 +56,15 @@ public class CommonController {
 
         return (movie!=null && user !=null)
                 ? new ResponseEntity<>(user, HttpStatus.OK)
+                : new ResponseEntity<>(HttpStatus.NOT_FOUND);
+    }
+
+    @GetMapping(value = "movies/top_watched_movies")
+    public ResponseEntity<List<Movie>> getTopWatchedMovies() {
+        final List<Movie> topWatchedMovies = topWatchedMoviesService.getTopWatchedMovies();
+
+        return !topWatchedMovies.isEmpty()
+                ? new ResponseEntity<>(topWatchedMovies, HttpStatus.OK)
                 : new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
 

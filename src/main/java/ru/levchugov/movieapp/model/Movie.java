@@ -3,6 +3,7 @@ package ru.levchugov.movieapp.model;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.util.concurrent.atomic.AtomicInteger;
 
 @Data
 @Entity
