@@ -24,4 +24,6 @@ public class Movie {
     @Column(name = "director")
     private String director;
 
+
+
 }

@@ -1,8 +1,7 @@
 package ru.levchugov.movieapp.service;
 
-import ru.levchugov.movieapp.model.Movie;
-import ru.levchugov.movieapp.model.MovieDto;
-import ru.levchugov.movieapp.model.UserDto;
+import ru.levchugov.movieapp.model.dto.MovieDto;
+import ru.levchugov.movieapp.model.dto.UserDto;
 
 import java.util.List;
 

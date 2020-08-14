@@ -8,12 +8,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import ru.levchugov.movieapp.model.Movie;
-import ru.levchugov.movieapp.model.MovieDto;
-import ru.levchugov.movieapp.model.UserDto;
+import ru.levchugov.movieapp.model.dto.MovieDto;
+import ru.levchugov.movieapp.model.dto.UserDto;
 import ru.levchugov.movieapp.service.MovieService;
 import ru.levchugov.movieapp.service.TopWatchedMoviesService;
 import ru.levchugov.movieapp.service.UserService;
+import ru.levchugov.movieapp.service.rabbit.sender.VoteSender;
 
 import java.util.List;
 
@@ -25,6 +25,7 @@ public class CommonController {
     private final UserService userService;
     private final MovieService movieService;
     private final TopWatchedMoviesService topWatchedMoviesService;
+    private final VoteSender voteSender;
 
     @GetMapping(value = "users/{id}/movies_to_watch")
     public ResponseEntity<?> addMovie(@PathVariable(value = "id") int userId,
@@ -38,7 +39,7 @@ public class CommonController {
                 userDto,
                 movie);
 
-        return (movie!=null && userDto !=null)
+        return (movie != null && userDto != null)
                 ? new ResponseEntity<>(userDto, HttpStatus.OK)
                 : new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
@@ -55,7 +56,7 @@ public class CommonController {
                 userDto,
                 movieDto);
 
-        return (movieDto!=null && userDto !=null)
+        return (movieDto != null && userDto != null)
                 ? new ResponseEntity<>(userDto, HttpStatus.OK)
                 : new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
@@ -67,6 +68,15 @@ public class CommonController {
         return !topWatchedMovies.isEmpty()
                 ? new ResponseEntity<>(topWatchedMovies, HttpStatus.OK)
                 : new ResponseEntity<>(HttpStatus.NOT_FOUND);
+    }
+
+    @GetMapping(value = "users/{id}/vote")
+    public ResponseEntity<?> voteForMovie(@PathVariable(value = "id") long userId,
+                                          @RequestParam(value = "movie_id") long movieId,
+                                          @RequestParam(value = "value") int value) {
+        voteSender.send(userId, movieId, value);
+
+        return new ResponseEntity<>(HttpStatus.OK);
     }
 
 }

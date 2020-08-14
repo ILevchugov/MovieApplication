@@ -5,7 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import ru.levchugov.movieapp.model.MovieDto;
+import ru.levchugov.movieapp.model.dto.MovieDto;
 import ru.levchugov.movieapp.service.MovieService;
 
 import java.util.List;

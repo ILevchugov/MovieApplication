@@ -5,7 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 import ru.levchugov.movieapp.model.Movie;
-import ru.levchugov.movieapp.model.MovieDto;
+import ru.levchugov.movieapp.model.dto.MovieDto;
 import ru.levchugov.movieapp.model.User;
 import ru.levchugov.movieapp.repository.MovieRepository;
 import ru.levchugov.movieapp.repository.UserRepository;

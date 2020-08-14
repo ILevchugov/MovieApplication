@@ -13,6 +13,32 @@ spring:
         format_sql: true
   flyway:
     baseline-on-migrate: true
+
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: movies
+    password: 1
+    virtual-host: movies
+
+
+  cloud:
+    stream:
+      bindings:
+        vote:
+          group: movie
+          destination: vote.in
+          contentType: application/json
+
+      rabbit:
+        bindings:
+          vote:
+            producer:
+              exchange-type: fanout
+            consumer:
+              autoBindDlq: true
+              acknowledgeMode: AUTO
+
 logging:
   level:
     org:

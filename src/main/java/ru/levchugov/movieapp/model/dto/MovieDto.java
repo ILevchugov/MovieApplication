@@ -1,4 +1,4 @@
-package ru.levchugov.movieapp.model;
+package ru.levchugov.movieapp.model.dto;
 
 import lombok.Data;
 
@@ -12,4 +12,5 @@ public class MovieDto {
     private String year;
 
     private String director;
+
 }
