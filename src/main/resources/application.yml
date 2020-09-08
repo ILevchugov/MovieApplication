@@ -1,4 +1,12 @@
+auth0:
+  audience: https://dev-lev-iv.eu.auth0.com/api/v2/
 spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: https://dev-lev-iv.eu.auth0.com/
+
   datasource:
     url: jdbc:postgresql://localhost:5432/moviesa
     username: postgres

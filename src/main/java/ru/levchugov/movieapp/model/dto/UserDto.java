@@ -1,11 +1,8 @@
 package ru.levchugov.movieapp.model.dto;
 
 import lombok.Data;
-import ru.levchugov.movieapp.model.Vote;
-import ru.levchugov.movieapp.model.dto.MovieDto;
 
 import java.util.List;
-import java.util.Set;
 
 @Data
 public class UserDto {

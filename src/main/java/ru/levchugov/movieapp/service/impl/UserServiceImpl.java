@@ -1,10 +1,7 @@
 package ru.levchugov.movieapp.service.impl;
 
-import lombok.AllArgsConstructor;
 import org.modelmapper.ModelMapper;
-import org.modelmapper.TypeMap;
 import org.springframework.stereotype.Service;
-import ru.levchugov.movieapp.model.Movie;
 import ru.levchugov.movieapp.model.dto.MovieDto;
 import ru.levchugov.movieapp.model.User;
 import ru.levchugov.movieapp.model.dto.UserDto;
@@ -12,9 +9,7 @@ import ru.levchugov.movieapp.repository.UserRepository;
 import ru.levchugov.movieapp.service.UserService;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 @Service
 public class UserServiceImpl implements UserService {
