@@ -10,6 +10,7 @@ import ru.levchugov.movieapp.service.MovieService;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 @AllArgsConstructor
@@ -26,20 +27,25 @@ public class MovieServiceImpl implements MovieService {
 
     @Override
     public List<MovieDto> findAll() {
-       List<Movie> movies = movieRepository.findAll();
-       List<MovieDto> moviesDtos = new ArrayList<>();
+        List<Movie> movies = movieRepository.findAll();
+        List<MovieDto> moviesDtos = new ArrayList<>();
 
-        for (Movie movie: movies) {
+        for (Movie movie : movies) {
             moviesDtos.add(modelMapper.map(movie, MovieDto.class));
         }
-
 
         return moviesDtos;
     }
 
     @Override
     public MovieDto findById(long id) {
-        return modelMapper.map(movieRepository.findById(id).get(), MovieDto.class);
+
+        Optional<Movie> movieOptional = movieRepository.findById(id);
+        if (movieOptional.isPresent()) {
+            return modelMapper.map(movieOptional.get(), MovieDto.class);
+        } else {
+            throw new IllegalArgumentException("No movie with this id");
+        }
     }
 
 }

@@ -5,8 +5,12 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import ru.levchugov.movieapp.api.FeignApiClient;
+import ru.levchugov.movieapp.api.model.Rating;
+import ru.levchugov.movieapp.configuration.AppProperties;
 import ru.levchugov.movieapp.model.dto.MovieDto;
 import ru.levchugov.movieapp.service.MovieService;
+import ru.levchugov.movieapp.service.impl.ImdbService;
 
 import java.util.List;
 
@@ -16,6 +20,7 @@ import java.util.List;
 public class MovieController {
 
     private final MovieService movieService;
+    private final ImdbService imdbService;
 
     @PostMapping(value = "/movies")
     public ResponseEntity<?> create(@RequestBody MovieDto movieDto) {
@@ -39,13 +44,24 @@ public class MovieController {
 
     @GetMapping(value = "/movies/{id}")
     public ResponseEntity<MovieDto> read(@PathVariable(name = "id") int id) {
-        final MovieDto movieDto = movieService.findById(id);
+        try {
+            MovieDto movieDto = movieService.findById(id);
+            log.info("Получен запрос на получение информации о фильме {}.", movieDto);
+            return new ResponseEntity<>(movieDto, HttpStatus.OK);
+        } catch (IllegalArgumentException e) {
+            log.error("Exception", e);
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+    }
 
-        log.info("Получен запрос на получение информации о фильме {}.", movieDto);
-
-        return movieDto != null
-                ? new ResponseEntity<>(movieDto, HttpStatus.OK)
-                : new ResponseEntity<>(HttpStatus.NOT_FOUND);
+    @GetMapping(value = "/movies/{id}/scores")
+    public ResponseEntity<Rating> scores(@PathVariable(name = "id") int id) {
+        try {
+            Rating rating = imdbService.getMovieRating(movieService.findById(id));
+            return new ResponseEntity<>(rating, HttpStatus.OK);
+        } catch (IllegalArgumentException e) {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
     }
 
 }
