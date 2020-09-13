@@ -2,7 +2,7 @@ package ru.levchugov.movieapp.service.impl;
 
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
-import ru.levchugov.movieapp.api.FeignApiClient;
+import ru.levchugov.movieapp.api.ImdbApiClient;
 import ru.levchugov.movieapp.api.model.Rating;
 import ru.levchugov.movieapp.api.model.SearchData;
 import ru.levchugov.movieapp.api.model.SearchMovieResult;
@@ -16,11 +16,11 @@ import java.util.List;
 public class ImdbService {
 
     private final AppProperties appProperties;
-    private final FeignApiClient feignApiClient;
+    private final ImdbApiClient imdbApiClient;
 
     public Rating getMovieRating(MovieDto movieDto) {
-        SearchData searchData = feignApiClient.searchMovie(appProperties.getImdbApiKey(), movieDto.getTitle());
+        SearchData searchData = imdbApiClient.searchMovie(appProperties.getImdbApiKey(), movieDto.getTitle());
         List<SearchMovieResult> results = searchData.getResults();
-        return feignApiClient.getRating(appProperties.getImdbApiKey(), results.get(0).getId());
+        return imdbApiClient.getRating(appProperties.getImdbApiKey(), results.get(0).getId());
     }
 }

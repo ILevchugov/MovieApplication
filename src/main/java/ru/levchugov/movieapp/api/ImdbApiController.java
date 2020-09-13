@@ -14,11 +14,11 @@ import java.util.List;
 public class ImdbApiController {
 
     private final AppProperties appProperties;
-    private final FeignApiClient feignApiClient;
+    private final ImdbApiClient imdbApiClient;
 
     @GetMapping(value = "/movies/search")
     public List<SearchMovieResult> search(@RequestParam(name = "movie") String movie) {
-        return feignApiClient.searchMovie(appProperties.getImdbApiKey(), movie).getResults();
+        return imdbApiClient.searchMovie(appProperties.getImdbApiKey(), movie).getResults();
     }
 
 }

@@ -10,7 +10,7 @@ import ru.levchugov.movieapp.api.model.SearchData;
 import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 
 @FeignClient(name = "imdb", url = "https://imdb-api.com", path = "/en/API")
-public interface FeignApiClient {
+public interface ImdbApiClient {
 
     @RequestMapping(method = RequestMethod.GET, value = "SearchMovie/{key}/{movie}", consumes = APPLICATION_JSON_VALUE)
     SearchData searchMovie(
