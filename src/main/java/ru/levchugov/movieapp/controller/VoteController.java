@@ -21,7 +21,7 @@ public class VoteController {
 
     @GetMapping(value = "votes")
     public ResponseEntity<List<VoteDto>> getVotes() {
-        var votes = voteService.readAll();
+        List<VoteDto> votes = voteService.readAll();
 
         return !votes.isEmpty()
                 ? new ResponseEntity<>(votes, HttpStatus.OK)

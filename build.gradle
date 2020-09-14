@@ -7,10 +7,14 @@ plugins {
 group 'org.example'
 version '1.0-SNAPSHOT'
 
+bootJar {
+    baseName = 'movie-app-docker'
+    version =  '1.0'
+}
+
 repositories {
     mavenCentral()
 }
-
 
 ext {
     set('springCloudVersion', 'Hoxton.SR5')
