@@ -12,6 +12,7 @@ import ru.levchugov.movieapp.model.dto.MovieDto;
 import ru.levchugov.movieapp.model.User;
 import ru.levchugov.movieapp.repository.MovieRepository;
 import ru.levchugov.movieapp.repository.UserRepository;
+import ru.levchugov.movieapp.service.TopWatchedMoviesService;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -20,7 +21,7 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.when;
 
-@SpringBootTest
+@SpringBootTest(classes = {TopWatchedMoviesService.class})
 class TopWatchedMoviesServiceImplTest {
 
     ModelMapper modelMapper = new ModelMapper();
