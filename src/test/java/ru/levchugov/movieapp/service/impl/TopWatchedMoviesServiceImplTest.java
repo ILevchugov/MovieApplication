@@ -100,7 +100,6 @@ class TopWatchedMoviesServiceImplTest {
             topWatchedMovies.add(modelMapper.map(movieDto, Movie.class ));
         }
 
-
         assertEquals(sortedMovies, topWatchedMovies);
     }
 }
