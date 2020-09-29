@@ -18,8 +18,8 @@ public class VoteServiceImpl implements VoteService {
 
     @Override
     public List<VoteDto> readAll() {
-        var votes = voteRepository.findAll();
-        var voteDtos = new ArrayList<VoteDto>();
+        List<Vote> votes = voteRepository.findAll();
+        List<VoteDto> voteDtos = new ArrayList<VoteDto>();
         for (Vote vote: votes) {
             voteDtos.add(vote.toDto());
         }
