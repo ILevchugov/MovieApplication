@@ -1,1 +1,3 @@
+install: gradle wrapper --gradle-version 6.1.1
+
 language: java
