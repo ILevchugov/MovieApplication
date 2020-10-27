@@ -39,4 +39,19 @@ public class MovieJdbcRepository {
                                 .build()
         );
     }
+
+    public Movie findById(long id) {
+        String findByIdQuery = "select * from movies where id = ?";
+
+        return jdbcTemplate.queryForObject(findByIdQuery,
+                new Object[]{id},
+                (rs, rowNum) ->
+                        Movie.builder()
+                                .id(rs.getLong("id"))
+                                .title(rs.getString("title"))
+                                .director(rs.getString("director"))
+                                .year(rs.getString("year"))
+                                .build()
+        );
+    }
 }

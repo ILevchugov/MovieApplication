@@ -17,7 +17,6 @@ import java.util.Optional;
 @AllArgsConstructor
 public class MovieServiceImpl implements MovieService {
 
-    private final MovieRepository movieRepository;
     private final MovieJdbcRepository movieJdbcRepository;
     private final ModelMapper modelMapper = new ModelMapper();
 
@@ -42,7 +41,7 @@ public class MovieServiceImpl implements MovieService {
     @Override
     public MovieDto findById(long id) {
 
-        Optional<Movie> movieOptional = movieRepository.findById(id);
+        Optional<Movie> movieOptional = Optional.ofNullable(movieJdbcRepository.findById(id));
         if (movieOptional.isPresent()) {
             return modelMapper.map(movieOptional.get(), MovieDto.class);
         } else {
