@@ -1,11 +1,17 @@
 package ru.levchugov.movieapp.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
 @Data
 @Entity
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 @Table(name = "movies")
 public class Movie {
 
@@ -23,7 +29,5 @@ public class Movie {
 
     @Column(name = "director")
     private String director;
-
-
 
 }

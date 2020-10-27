@@ -5,6 +5,7 @@ import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 import ru.levchugov.movieapp.model.Movie;
 import ru.levchugov.movieapp.model.dto.MovieDto;
+import ru.levchugov.movieapp.repository.MovieJdbcRepository;
 import ru.levchugov.movieapp.repository.MovieRepository;
 import ru.levchugov.movieapp.service.MovieService;
 
@@ -17,17 +18,18 @@ import java.util.Optional;
 public class MovieServiceImpl implements MovieService {
 
     private final MovieRepository movieRepository;
+    private final MovieJdbcRepository movieJdbcRepository;
     private final ModelMapper modelMapper = new ModelMapper();
 
     @Override
     public void add(MovieDto movieDto) {
         Movie movie = modelMapper.map(movieDto, Movie.class);
-        movieRepository.save(movie);
+        movieJdbcRepository.save(movie);
     }
 
     @Override
     public List<MovieDto> findAll() {
-        List<Movie> movies = movieRepository.findAll();
+        List<Movie> movies = movieJdbcRepository.findAll();
         List<MovieDto> moviesDtos = new ArrayList<>();
 
         for (Movie movie : movies) {
