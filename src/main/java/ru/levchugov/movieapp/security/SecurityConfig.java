@@ -44,6 +44,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.authorizeRequests()
                 .mvcMatchers("/").permitAll()
                 .mvcMatchers("/users").authenticated()
+                .mvcMatchers("users/{id}").authenticated()
                 .and()
                 .oauth2ResourceServer().jwt();
     }
