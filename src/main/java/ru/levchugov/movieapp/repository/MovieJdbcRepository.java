@@ -1,6 +1,7 @@
 package ru.levchugov.movieapp.repository;
 
 import lombok.AllArgsConstructor;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;
 import ru.levchugov.movieapp.model.Movie;
@@ -53,5 +54,23 @@ public class MovieJdbcRepository {
                                 .year(rs.getString("year"))
                                 .build()
         );
+    }
+
+    public Movie findByTitle(String title) {
+        String findByTitleQuery = "select * from movies where title = ?";
+        try {
+
+            return jdbcTemplate.queryForObject(findByTitleQuery, new Object[]{title},
+                    (rs, rowNum) ->
+                            Movie.builder()
+                                    .id(rs.getLong("id"))
+                                    .title(rs.getString("title"))
+                                    .director(rs.getString("director"))
+                                    .year(rs.getString("year"))
+                                    .build()
+            );
+        } catch (EmptyResultDataAccessException e) {
+            return null;
+        }
     }
 }
