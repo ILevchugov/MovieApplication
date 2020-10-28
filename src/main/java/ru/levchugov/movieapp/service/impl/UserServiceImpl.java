@@ -1,6 +1,5 @@
 package ru.levchugov.movieapp.service.impl;
 
-import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 import ru.levchugov.movieapp.model.dto.MovieDto;
 import ru.levchugov.movieapp.model.User;
@@ -10,12 +9,12 @@ import ru.levchugov.movieapp.service.UserService;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class UserServiceImpl implements UserService {
 
     private final UserRepository userRepository;
-    private final ModelMapper modelMapper = new ModelMapper();
 
     public UserServiceImpl(UserRepository userRepository) {
         this.userRepository = userRepository;
@@ -23,8 +22,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public void create(UserDto userDto) {
-        User user = modelMapper.map(userDto, User.class);
-        userRepository.save(user);
+        userRepository.save(User.fromDto(userDto));
     }
 
     @Override
@@ -41,16 +39,19 @@ public class UserServiceImpl implements UserService {
     }
     @Override
     public UserDto findById(long id) {
-        return modelMapper.map(userRepository.findById(id).get(), UserDto.class);
+        Optional<User> optionalUser = userRepository.findById(id);
+        if (optionalUser.isPresent()) {
+            return optionalUser.get().toDto();
+        } else {
+            throw new IllegalArgumentException("Wrong id");
+        }
     }
 
     @Override
     public void addMovieToWatch(UserDto userDto, MovieDto movieDto) {
         userDto.getMoviesToWatch().add(movieDto.getId());
 
-        User user = modelMapper.map(userDto, User.class);
-
-        userRepository.save(user);
+        userRepository.save(User.fromDto(userDto));
     }
 
     @Override
@@ -58,9 +59,7 @@ public class UserServiceImpl implements UserService {
         userDto.getMoviesToWatch().remove(movieDto);
         userDto.getMoviesWatched().add(movieDto.getId());
 
-        User user = modelMapper.map(userDto, User.class);
-
-        userRepository.save(user);
+        userRepository.save(User.fromDto(userDto));
     }
 
 }
