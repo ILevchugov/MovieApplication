@@ -34,9 +34,9 @@ public class ImdbService {
         Movie movie = movieJdbcRepository.findByTitle(title);
 
         List<SearchMovieResult> movieResultList
-                    = imdbApiClient.searchMovie(appProperties.getImdbApiKey(), title).getResults();
+                = imdbApiClient.searchMovie(appProperties.getImdbApiKey(), title).getResults();
 
-        if (movie==null) {
+        if (movie == null) {
             log.info("Здесь должны добавлять новый фильм в базу");
         }
 

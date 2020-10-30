@@ -4,15 +4,16 @@ import lombok.AllArgsConstructor;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 import ru.levchugov.movieapp.model.Movie;
 
 import java.util.List;
 
-@Component
+@Repository
 @AllArgsConstructor
 public class MovieJdbcRepository {
 
-    private JdbcTemplate jdbcTemplate;
+    private final JdbcTemplate jdbcTemplate;
 
     public void save(Movie movie) {
         String saveQuery = "insert into movies (id, title, year, director) values (nextval('movies_id_seq'), ?, ?, ?)";
