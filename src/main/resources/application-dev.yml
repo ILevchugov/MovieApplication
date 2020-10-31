@@ -1,0 +1,61 @@
+auth0:
+  audience: https://dev-lev-iv.eu.auth0.com/api/v2/
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: https://dev-lev-iv.eu.auth0.com/
+
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driverClassName: org.h2.Driver
+    username: sa
+    password: password
+  jpa:
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+    database-platform: org.hibernate.dialect.H2Dialect
+  flyway:
+    baseline-on-migrate: true
+
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: movies
+    password: 1
+    virtual-host: movies
+
+  cloud:
+    stream:
+      bindings:
+        vote:
+          group: movie
+          destination: vote.in
+          contentType: application/json
+
+      rabbit:
+        bindings:
+          vote:
+            producer:
+              exchange-type: fanout
+            consumer:
+              autoBindDlq: true
+              acknowledgeMode: AUTO
+
+logging:
+  level:
+    org:
+      hibernate:
+        type: trace
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+app:
+  imdbApiKey: k_vI13OqE4
