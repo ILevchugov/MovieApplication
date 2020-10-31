@@ -10,7 +10,11 @@ import ru.levchugov.movieapp.model.dto.MovieDto;
 import ru.levchugov.movieapp.repository.MovieJdbcRepository;
 import ru.levchugov.movieapp.service.impl.MovieServiceImpl;
 
+import java.util.List;
+
+
 import static org.mockito.Mockito.*;
+import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest(classes = {MovieServiceImpl.class})
 class MovieServiceTest {
@@ -35,5 +39,22 @@ class MovieServiceTest {
         doNothing().when(movieJdbcRepository).save(any());
 
         verify(movieJdbcRepository).save(modelMapper.map(movieDto, Movie.class));
+    }
+
+    @Test
+    void test_find_all() {
+        when(movieJdbcRepository.findAll()).thenReturn(List.of(Movie.builder()
+                .director("director")
+                .id(1L)
+                .title("title")
+                .year("2020")
+                .build()));
+
+        List<MovieDto> movies = movieService.findAll();
+
+        assertEquals(movies.get(0).getDirector(), "director");
+        assertEquals(movies.get(0).getId(), 1L);
+        assertEquals(movies.get(0).getTitle(), "title");
+        assertEquals(movies.get(0).getYear(), "2020");
     }
 }
