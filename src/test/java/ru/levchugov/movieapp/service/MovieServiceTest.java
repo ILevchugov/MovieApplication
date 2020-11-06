@@ -52,7 +52,7 @@ class MovieServiceTest {
 
         List<MovieDto> movies = movieService.findAll();
 
-        assertEquals(movies.get(0).getDirector(), "director");
+        assertEquals("director", movies.get(0).getDirector());
         assertEquals(movies.get(0).getId(), 1L);
         assertEquals(movies.get(0).getTitle(), "title");
         assertEquals(movies.get(0).getYear(), "2020");
