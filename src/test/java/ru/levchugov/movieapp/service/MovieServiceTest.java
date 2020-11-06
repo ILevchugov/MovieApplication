@@ -52,7 +52,6 @@ class MovieServiceTest {
 
         List<MovieDto> movies = movieService.findAll();
 
-        //some shit
         assertEquals(movies.get(0).getDirector(), "director");
         assertEquals(movies.get(0).getId(), 1L);
         assertEquals(movies.get(0).getTitle(), "title");
