@@ -17,7 +17,7 @@ import static org.mockito.Mockito.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest(classes = {MovieServiceImpl.class})
-class MovieServiceTest {
+class   MovieServiceTest {
 
     @Autowired
     private MovieService movieService;
@@ -62,7 +62,7 @@ class MovieServiceTest {
 
     @Test
     void test_find_by_id() {
-        when(movieJdbcRepository.findById(any())).thenReturn(
+        when(movieJdbcRepository.findById(anyLong())).thenReturn(
                 Movie.builder()
                         .director("director")
                         .id(1L)
@@ -76,6 +76,6 @@ class MovieServiceTest {
         assertEquals(1L, movie.getId());
         assertEquals("title", movie.getTitle());
         assertEquals("director", movie.getDirector());
-        assertEquals("2020", movie.getDirector());
+        assertEquals("2020", movie.getYear());
     }
 }
