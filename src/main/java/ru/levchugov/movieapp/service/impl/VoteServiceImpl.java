@@ -14,7 +14,7 @@ import java.util.List;
 @AllArgsConstructor
 public class VoteServiceImpl implements VoteService {
 
-    private VoteRepository voteRepository;
+    private final VoteRepository voteRepository;
 
     @Override
     public List<VoteDto> readAll() {

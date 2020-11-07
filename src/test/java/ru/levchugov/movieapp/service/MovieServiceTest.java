@@ -20,7 +20,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class MovieServiceTest {
 
     @Autowired
-    MovieService movieService;
+    private MovieService movieService;
 
     @MockBean
     private MovieJdbcRepository movieJdbcRepository;
@@ -43,18 +43,39 @@ class MovieServiceTest {
 
     @Test
     void test_find_all() {
-        when(movieJdbcRepository.findAll()).thenReturn(List.of(Movie.builder()
-                .director("director")
-                .id(1L)
-                .title("title")
-                .year("2020")
-                .build()));
+        when(movieJdbcRepository.findAll()).thenReturn(
+                List.of(Movie.builder()
+                        .director("director")
+                        .id(1L)
+                        .title("title")
+                        .year("2020")
+                        .build())
+        );
 
         List<MovieDto> movies = movieService.findAll();
 
-        assertEquals("director", movies.get(0).getDirector());
-        assertEquals(movies.get(0).getId(), 1L);
-        assertEquals(movies.get(0).getTitle(), "title");
-        assertEquals(movies.get(0).getYear(), "2020");
+        assertEquals(1L, movies.get(0).getId());
+        assertEquals( "director", movies.get(0).getDirector());
+        assertEquals("title", movies.get(0).getTitle());
+        assertEquals("2020", movies.get(0).getYear());
+    }
+
+    @Test
+    void test_find_by_id() {
+        when(movieJdbcRepository.findById(any())).thenReturn(
+                Movie.builder()
+                        .director("director")
+                        .id(1L)
+                        .title("title")
+                        .year("2020")
+                        .build()
+        );
+
+        MovieDto movie = movieService.findById(1L);
+
+        assertEquals(1L, movie.getId());
+        assertEquals("title", movie.getTitle());
+        assertEquals("director", movie.getDirector());
+        assertEquals("2020", movie.getDirector());
     }
 }

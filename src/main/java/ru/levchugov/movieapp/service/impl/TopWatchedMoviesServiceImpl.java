@@ -31,16 +31,17 @@ public class TopWatchedMoviesServiceImpl implements TopWatchedMoviesService {
 
         log.info("Список фильмов {}", movies);
 
-        movies.sort((movie1, movie2) -> {
+        //todo: придумать более оптимальный алгоритм
+        movies.sort((firstMovie, secondMovie) -> {
             int movie1Count = 0;
             int movie2Count = 0;
             List<User> users = userRepository.findAll();
 
-            for (User user1 : users) {
-                if (user1.getMoviesWatched().contains(movie1)) {
+            for (User user : users) {
+                if (user.getMoviesWatched().contains(firstMovie)) {
                     movie1Count++;
                 }
-                if (user1.getMoviesWatched().contains(movie2)) {
+                if (user.getMoviesWatched().contains(secondMovie)) {
                     movie2Count++;
                 }
             }

@@ -30,13 +30,14 @@ public class ImdbService {
     }
 
     public List<SearchMovieResult> search(String title) {
-
         Movie movie = movieJdbcRepository.findByTitle(title);
+
 
         List<SearchMovieResult> movieResultList
                 = imdbApiClient.searchMovie(appProperties.getImdbApiKey(), title).getResults();
 
         if (movie == null) {
+            //todo: придумать алгоритм добавление фильма в базу из поиска
             log.info("Здесь должны добавлять новый фильм в базу");
         }
 

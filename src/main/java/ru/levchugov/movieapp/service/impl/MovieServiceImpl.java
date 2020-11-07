@@ -6,7 +6,6 @@ import org.springframework.stereotype.Service;
 import ru.levchugov.movieapp.model.Movie;
 import ru.levchugov.movieapp.model.dto.MovieDto;
 import ru.levchugov.movieapp.repository.MovieJdbcRepository;
-import ru.levchugov.movieapp.repository.MovieRepository;
 import ru.levchugov.movieapp.service.MovieService;
 
 import java.util.ArrayList;

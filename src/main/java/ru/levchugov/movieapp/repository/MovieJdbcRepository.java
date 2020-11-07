@@ -3,7 +3,6 @@ package ru.levchugov.movieapp.repository;
 import lombok.AllArgsConstructor;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 import ru.levchugov.movieapp.model.Movie;
 
@@ -24,7 +23,6 @@ public class MovieJdbcRepository {
                 movie.getYear(),
                 movie.getDirector()
         );
-
     }
 
     public List<Movie> findAll() {
@@ -60,7 +58,6 @@ public class MovieJdbcRepository {
     public Movie findByTitle(String title) {
         String findByTitleQuery = "select * from movies where title = ?";
         try {
-
             return jdbcTemplate.queryForObject(findByTitleQuery, new Object[]{title},
                     (rs, rowNum) ->
                             Movie.builder()

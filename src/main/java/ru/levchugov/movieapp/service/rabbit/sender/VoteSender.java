@@ -14,7 +14,7 @@ import ru.levchugov.movieapp.service.rabbit.VoteOut;
 @EnableBinding(VoteOut.class)
 public class VoteSender {
 
-    private VoteOut voteOut;
+    private final VoteOut voteOut;
 
     public void send(long userId, long movieId, int value) {
         VoteDto vote = new VoteDto();

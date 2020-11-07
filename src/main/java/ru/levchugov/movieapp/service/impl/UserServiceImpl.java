@@ -56,7 +56,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public void removeMovie(UserDto userDto, MovieDto movieDto) {
-        userDto.getMoviesToWatch().remove(movieDto);
+        userDto.getMoviesToWatch().remove(movieDto.getId());
         userDto.getMoviesWatched().add(movieDto.getId());
 
         userRepository.save(User.fromDto(userDto));
