@@ -1,2 +1,3 @@
-rootProject.name = 'ExampleApplication'
+rootProject.name = 'MovieService'
+include 'MovieAppService'
 
