@@ -2,7 +2,7 @@ package ru.levchugov.movieapp.repository;
 
 import lombok.AllArgsConstructor;
 import org.springframework.dao.EmptyResultDataAccessException;
-import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.JdbcOperations;
 import org.springframework.stereotype.Repository;
 import ru.levchugov.movieapp.model.Movie;
 
@@ -12,12 +12,12 @@ import java.util.List;
 @AllArgsConstructor
 public class MovieJdbcRepository {
 
-    private final JdbcTemplate jdbcTemplate;
+    private final JdbcOperations jdbcOperations;
 
     public void save(Movie movie) {
         String saveQuery = "insert into movies (id, title, year, director) values (nextval('movies_id_seq'), ?, ?, ?)";
 
-        jdbcTemplate.update(
+        jdbcOperations.update(
                 saveQuery,
                 movie.getTitle(),
                 movie.getYear(),
@@ -28,7 +28,7 @@ public class MovieJdbcRepository {
     public List<Movie> findAll() {
         String findAllQuery = "select * from movies";
 
-        return jdbcTemplate.query(
+        return jdbcOperations.query(
                 findAllQuery,
                 (rs, rowNum) ->
                         Movie.builder()
@@ -43,7 +43,7 @@ public class MovieJdbcRepository {
     public Movie findById(long id) {
         String findByIdQuery = "select * from movies where id = ?";
 
-        return jdbcTemplate.queryForObject(findByIdQuery,
+        return jdbcOperations.queryForObject(findByIdQuery,
                 new Object[]{id},
                 (rs, rowNum) ->
                         Movie.builder()
@@ -58,7 +58,7 @@ public class MovieJdbcRepository {
     public Movie findByTitle(String title) {
         String findByTitleQuery = "select * from movies where title = ?";
         try {
-            return jdbcTemplate.queryForObject(findByTitleQuery, new Object[]{title},
+            return jdbcOperations.queryForObject(findByTitleQuery, new Object[]{title},
                     (rs, rowNum) ->
                             Movie.builder()
                                     .id(rs.getLong("id"))

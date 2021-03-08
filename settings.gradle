@@ -1,3 +1,4 @@
 rootProject.name = 'MovieService'
-include 'MovieAppService'
+include 'movie-app-service'
+include 'subscription-service'
 
