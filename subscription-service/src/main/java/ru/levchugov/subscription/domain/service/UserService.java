@@ -22,4 +22,8 @@ public class UserService {
                         .build()
         );
     }
+
+    public void getAll() {
+
+    }
 }

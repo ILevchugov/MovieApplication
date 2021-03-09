@@ -35,6 +35,10 @@ spring:
           group: movie
           destination: vote.in
           contentType: application/json
+        user:
+          group: movie
+          destination: user.in
+          ontentType: application/json
 
       rabbit:
         bindings:
@@ -44,6 +48,9 @@ spring:
             consumer:
               autoBindDlq: true
               acknowledgeMode: AUTO
+          user:
+            producer:
+              exchange-type: fanout
 
 logging:
   level:

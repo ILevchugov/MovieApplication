@@ -10,6 +10,10 @@ repositories {
     mavenCentral()
 }
 
+ext {
+    set('springCloudVersion', 'Hoxton.SR5')
+}
+
 dependencies {
     compile group: 'com.h2database', name:'h2', version: '1.4.200'
 
@@ -17,7 +21,9 @@ dependencies {
 
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.springframework.boot:spring-boot-starter-data-jdbc'
+    implementation 'org.springframework.cloud:spring-cloud-starter-stream-rabbit'
     implementation "org.flywaydb:flyway-core:5.2.4"
+
 
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
@@ -28,4 +34,10 @@ dependencies {
 
 test {
     useJUnitPlatform()
+}
+
+dependencyManagement {
+    imports {
+        mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+    }
 }

@@ -1,27 +1,28 @@
 package ru.levchugov.movieapp.service.impl;
 
+import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import ru.levchugov.movieapp.model.dto.MovieDto;
 import ru.levchugov.movieapp.model.User;
 import ru.levchugov.movieapp.model.dto.UserDto;
 import ru.levchugov.movieapp.repository.UserRepository;
 import ru.levchugov.movieapp.service.UserService;
+import ru.levchugov.movieapp.service.rabbit.sender.UserSender;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
 @Service
+@AllArgsConstructor
 public class UserServiceImpl implements UserService {
 
     private final UserRepository userRepository;
-
-    public UserServiceImpl(UserRepository userRepository) {
-        this.userRepository = userRepository;
-    }
+    private final UserSender userSender;
 
     @Override
     public void create(UserDto userDto) {
+        userSender.send(userDto);
         userRepository.save(User.fromDto(userDto));
     }
 

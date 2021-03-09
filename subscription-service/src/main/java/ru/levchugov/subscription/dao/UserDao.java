@@ -5,6 +5,8 @@ import org.springframework.jdbc.core.JdbcOperations;
 import org.springframework.stereotype.Repository;
 import ru.levchugov.subscription.domain.User;
 
+import java.util.Set;
+
 
 @Repository
 @AllArgsConstructor
