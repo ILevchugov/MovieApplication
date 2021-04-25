@@ -32,7 +32,6 @@ public class ImdbService {
     public List<SearchMovieResult> search(String title) {
         Movie movie = movieJdbcRepository.findByTitle(title);
 
-
         List<SearchMovieResult> movieResultList
                 = imdbApiClient.searchMovie(appProperties.getImdbApiKey(), title).getResults();
 

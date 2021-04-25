@@ -11,7 +11,6 @@ import ru.levchugov.movieapp.service.rabbit.sender.UserSender;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 @Service
 @AllArgsConstructor
@@ -40,18 +39,14 @@ public class UserServiceImpl implements UserService {
     }
     @Override
     public UserDto findById(long id) {
-        Optional<User> optionalUser = userRepository.findById(id);
-        if (optionalUser.isPresent()) {
-            return optionalUser.get().toDto();
-        } else {
-            throw new IllegalArgumentException("Wrong id");
-        }
+        return userRepository.findById(id).orElseThrow(
+                () -> new IllegalArgumentException("Wrong id")
+        ).toDto();
     }
 
     @Override
     public void addMovieToWatch(UserDto userDto, MovieDto movieDto) {
         userDto.getMoviesToWatch().add(movieDto.getId());
-
         userRepository.save(User.fromDto(userDto));
     }
 

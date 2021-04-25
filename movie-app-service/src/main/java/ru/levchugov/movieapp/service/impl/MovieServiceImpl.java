@@ -39,13 +39,12 @@ public class MovieServiceImpl implements MovieService {
 
     @Override
     public MovieDto findById(long id) {
-
-        Optional<Movie> movieOptional = Optional.ofNullable(movieJdbcRepository.findById(id));
-        if (movieOptional.isPresent()) {
-            return modelMapper.map(movieOptional.get(), MovieDto.class);
-        } else {
-            throw new IllegalArgumentException("No movie with this id");
-        }
+        return modelMapper.map(
+                Optional.ofNullable(movieJdbcRepository.findById(id)).orElseThrow(
+                        () -> new IllegalArgumentException("No movie with this id")
+                ),
+                MovieDto.class
+        );
     }
 
 }

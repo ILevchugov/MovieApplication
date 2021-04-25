@@ -14,8 +14,6 @@ import ru.levchugov.movieapp.repository.UserRepository;
 import ru.levchugov.movieapp.repository.VoteRepository;
 import ru.levchugov.movieapp.service.rabbit.VoteIn;
 
-import java.util.Optional;
-
 
 @Slf4j
 @Component
@@ -32,15 +30,15 @@ public class VoteListener {
         log.info("Received <" + voteDto.toString() + ">");
 
         Vote vote = new Vote();
-        Optional<User> user = userRepository.findById(voteDto.getUserId());
-        Optional<Movie> movie = movieRepository.findById(voteDto.getMovieId());
-        if (user.isPresent() && movie.isPresent()) {
-            vote.setUser(user.get());
-            vote.setMovie(movie.get());
-        } else {
-            //todo: приудмать свои ексепшены
-            throw new IllegalArgumentException("Received vote with wrong movie or user");
-        }
+        User user = userRepository.findById(voteDto.getUserId()).orElseThrow(
+                () -> new IllegalArgumentException("Invalid user id")
+        );
+        Movie movie = movieRepository.findById(voteDto.getMovieId()).orElseThrow(
+                () -> new IllegalArgumentException("Invalid movie id")
+        );
+        vote.setUser(user);
+        vote.setMovie(movie);
+
         voteRepository.save(vote);
     }
 }
