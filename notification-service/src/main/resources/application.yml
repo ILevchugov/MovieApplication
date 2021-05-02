@@ -1,0 +1,16 @@
+server:
+  port : 8070
+
+spring:
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: levchugovfortests@gmail.com
+    password: pass
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true

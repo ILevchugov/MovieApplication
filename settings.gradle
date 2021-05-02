@@ -1,4 +1,5 @@
 rootProject.name = 'MovieService'
 include 'movie-app-service'
 include 'subscription-service'
+include 'notification-service'
 
