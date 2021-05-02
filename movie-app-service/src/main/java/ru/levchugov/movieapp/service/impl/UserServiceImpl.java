@@ -2,6 +2,8 @@ package ru.levchugov.movieapp.service.impl;
 
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
+import ru.levchugov.movieapp.api.NotificationClient;
+import ru.levchugov.movieapp.api.model.Email;
 import ru.levchugov.movieapp.model.dto.MovieDto;
 import ru.levchugov.movieapp.model.User;
 import ru.levchugov.movieapp.model.dto.UserDto;
@@ -18,11 +20,18 @@ public class UserServiceImpl implements UserService {
 
     private final UserRepository userRepository;
     private final UserSender userSender;
+    private final NotificationClient notificationClient;
 
     @Override
     public void create(UserDto userDto) {
         userSender.send(userDto);
         userRepository.save(User.fromDto(userDto));
+        notificationClient.sendEmail(
+                Email.builder()
+                        .to(userDto.getEmail())
+                        .text("Welcome, " + userDto.getFullName() + " " + userDto.getName() + "!")
+                        .build()
+        );
     }
 
     @Override
@@ -30,13 +39,14 @@ public class UserServiceImpl implements UserService {
         List<User> users = userRepository.findAll();
         List<UserDto> usersDto = new ArrayList<>();
 
-        for (User user: users) {
+        for (User user : users) {
             usersDto.add(user.toDto());
         }
 
         return usersDto;
 
     }
+
     @Override
     public UserDto findById(long id) {
         return userRepository.findById(id).orElseThrow(
