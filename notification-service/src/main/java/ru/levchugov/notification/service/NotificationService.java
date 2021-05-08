@@ -1,28 +1,24 @@
 package ru.levchugov.notification.service;
 
 import lombok.AllArgsConstructor;
-
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.mail.MailSender;
-import org.springframework.mail.SimpleMailMessage;
 import org.springframework.stereotype.Service;
+import ru.levchugov.notification.model.Email;
+import ru.levchugov.notification.model.EmailType;
+import ru.levchugov.notification.service.mail.SendingStrategy;
+
+import java.util.Map;
 
 @Slf4j
 @Service
 @AllArgsConstructor
 public class NotificationService {
 
-   private final MailSender mailSender;
+    Map<EmailType, SendingStrategy> sendingStrategies;
 
-    public void sendEmail(String emailTo, String text) {
-        SimpleMailMessage message = new SimpleMailMessage();
+    public void sendEmail(Email email, EmailType emailType) {
+        sendingStrategies.get(emailType).send(email);
 
-        message.setSubject("Greeting");
-        message.setText(text);
-        message.setTo(emailTo);
-
-        mailSender.send(message);
-
-        log.info("Email message sent to {}", emailTo);
+        log.info("Email message sent to {}", email.getTo());
     }
 }
