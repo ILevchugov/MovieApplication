@@ -10,7 +10,7 @@ spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/moviesa
     username: postgres
-    password: Kruwovica05
+    password: postgres 
     driver-class-name: org.postgresql.Driver
   jpa:
     database: postgresql
