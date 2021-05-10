@@ -14,7 +14,7 @@ import java.util.Map;
 @AllArgsConstructor
 public class NotificationService {
 
-    Map<EmailType, SendingStrategy> sendingStrategies;
+    private final Map<EmailType, SendingStrategy> sendingStrategies;
 
     public void sendEmail(Email email, EmailType emailType) {
         sendingStrategies.get(emailType).send(email);

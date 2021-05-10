@@ -6,7 +6,7 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 import ru.levchugov.notification.model.Email;
 import ru.levchugov.notification.model.EmailType;
-import ru.levchugov.notification.repository.UserRepository;
+import ru.levchugov.notification.repository.UserMongoRepository;
 import ru.levchugov.notification.service.mail.SendingStrategy;
 
 import java.util.Map;
@@ -15,8 +15,8 @@ import java.util.Map;
 @AllArgsConstructor
 public class ScheduledMailSendingService {
 
-    Map<EmailType, SendingStrategy> sendingStrategies;
-    UserRepository userRepository;
+    private final Map<EmailType, SendingStrategy> sendingStrategies;
+    private final UserMongoRepository userRepository;
 
     @Scheduled(fixedRate = 60000)
     public void send() {

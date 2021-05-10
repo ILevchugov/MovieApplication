@@ -28,4 +28,5 @@ public class NotificationController {
 
         return ResponseEntity.ok().build();
     }
+
 }
