@@ -7,6 +7,8 @@ import org.springframework.mail.SimpleMailMessage;
 import org.springframework.stereotype.Component;
 import ru.levchugov.notification.model.Email;
 import ru.levchugov.notification.model.EmailType;
+import ru.levchugov.notification.model.MailTemplate;
+import ru.levchugov.notification.repository.MailTemplateRepository;
 
 @Slf4j
 @Component
@@ -14,13 +16,16 @@ import ru.levchugov.notification.model.EmailType;
 public class GreetingsSender implements SendingStrategy {
 
     private final MailSender mailSender;
+    private final MailTemplateRepository mailTemplateRepository;
 
     @Override
     public void send(Email email) {
+        MailTemplate mailTemplate  = mailTemplateRepository.findMailTemplateByEmailType(getType());
+
         SimpleMailMessage message = new SimpleMailMessage();
 
-        message.setSubject("Greeting");
-        message.setText("Welcome in MovieApp, " + email.getUserName() + "!!!");
+        message.setSubject(mailTemplate.getSubject());
+        message.setText(mailTemplate.getText());
         message.setTo(email.getTo());
 
         mailSender.send(message);

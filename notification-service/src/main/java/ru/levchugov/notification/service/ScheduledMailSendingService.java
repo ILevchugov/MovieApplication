@@ -23,6 +23,7 @@ public class ScheduledMailSendingService {
        userRepository.findAll().forEach(
                user -> sendingStrategies.get(EmailType.ADVERTISING).send(
                        Email.builder()
+                               .userName(user.getName())
                                .to(user.getEmail())
                                .build()
                )

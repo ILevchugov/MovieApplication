@@ -7,6 +7,8 @@ import org.springframework.mail.SimpleMailMessage;
 import org.springframework.stereotype.Component;
 import ru.levchugov.notification.model.Email;
 import ru.levchugov.notification.model.EmailType;
+import ru.levchugov.notification.model.MailTemplate;
+import ru.levchugov.notification.repository.MailTemplateRepository;
 
 @Slf4j
 @Component
@@ -14,16 +16,11 @@ import ru.levchugov.notification.model.EmailType;
 public class AdEmailSender implements SendingStrategy {
 
     private final MailSender mailSender;
+    private final MailTemplateRepository mailTemplateRepository;
 
     @Override
     public void send(Email email) {
-        SimpleMailMessage message = new SimpleMailMessage();
-
-        message.setSubject("Discount 15%");
-        message.setText("First month with discount!");
-        message.setTo(email.getTo());
-
-        mailSender.send(message);
+        mailSender.send(buildMessage(email));
 
         log.info("Ad email message sent to {}", email.getTo());
     }
@@ -31,5 +28,17 @@ public class AdEmailSender implements SendingStrategy {
     @Override
     public EmailType getType() {
         return EmailType.ADVERTISING;
+    }
+
+    private SimpleMailMessage buildMessage(Email email) {
+        SimpleMailMessage message = new SimpleMailMessage();
+
+        MailTemplate mailTemplate = mailTemplateRepository.findMailTemplateByEmailType(getType());
+
+        message.setSubject(mailTemplate.getSubject());
+        message.setText(mailTemplate.getText());
+        message.setTo(email.getTo());
+
+        return message;
     }
 }
