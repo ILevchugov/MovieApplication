@@ -7,13 +7,13 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import ru.levchugov.notification.model.User;
-import ru.levchugov.notification.repository.UserMongoRepository;
+import ru.levchugov.notification.repository.UserRepository;
 
 @RestController
 @AllArgsConstructor
 public class UserController {
 
-    private final UserMongoRepository userMongoRepository;
+    private final UserRepository userMongoRepository;
 
     @PostMapping("user")
     public ResponseEntity<?> addUser(@RequestBody User user) {

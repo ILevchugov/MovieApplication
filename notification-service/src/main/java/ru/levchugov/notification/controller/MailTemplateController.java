@@ -8,26 +8,26 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import ru.levchugov.notification.model.MailTemplate;
-import ru.levchugov.notification.repository.MailTemplateRepository;
+import ru.levchugov.notification.service.mail.MailTemplateService;
 
 @Slf4j
 @RestController
 @AllArgsConstructor
 public class MailTemplateController {
 
-    private final MailTemplateRepository mailTemplateRepository;
+    private final MailTemplateService mailTemplateService;
 
     @PostMapping("mail/templates")
     public ResponseEntity<?> addTemplate(@RequestBody MailTemplate mailTemplate) {
         log.info("template for saving: {}", mailTemplate);
-        mailTemplateRepository.save(mailTemplate);
+        mailTemplateService.create(mailTemplate);
 
         return ResponseEntity.ok().build();
     }
 
     @GetMapping("mail/templates")
     public ResponseEntity<?> getTemplates() {
-        return ResponseEntity.ok(mailTemplateRepository.findAll());
+        return ResponseEntity.ok(mailTemplateService.getAll());
     }
 
 }

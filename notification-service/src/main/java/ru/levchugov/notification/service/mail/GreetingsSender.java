@@ -8,7 +8,6 @@ import org.springframework.stereotype.Component;
 import ru.levchugov.notification.model.Email;
 import ru.levchugov.notification.model.EmailType;
 import ru.levchugov.notification.model.MailTemplate;
-import ru.levchugov.notification.repository.MailTemplateRepository;
 
 @Slf4j
 @Component
@@ -16,11 +15,11 @@ import ru.levchugov.notification.repository.MailTemplateRepository;
 public class GreetingsSender implements SendingStrategy {
 
     private final MailSender mailSender;
-    private final MailTemplateRepository mailTemplateRepository;
+    private final MailTemplateService mailTemplateService;
 
     @Override
     public void send(Email email) {
-        MailTemplate mailTemplate  = mailTemplateRepository.findMailTemplateByEmailType(getType());
+        MailTemplate mailTemplate  = mailTemplateService.getMailTemplateByType(getType());
 
         SimpleMailMessage message = new SimpleMailMessage();
 
