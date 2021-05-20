@@ -1,15 +1,9 @@
 package ru.levchugov.notification.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.ToString;
+import lombok.*;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Getter
-@Builder
-@ToString
-@AllArgsConstructor
+@Data
 @Document(collection = "mail_templates")
 public class MailTemplate {
 
@@ -18,5 +12,12 @@ public class MailTemplate {
     private final String subject;
 
     private final EmailType emailType;
+
+    //TODO: make class immutable, add @JsonCreator
+    public MailTemplate() {
+        this.text = null;
+        this.subject = null;
+        this.emailType = null;
+    }
 
 }

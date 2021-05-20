@@ -1,4 +1,4 @@
-package ru.levchugov.notification.service.mail;
+package ru.levchugov.notification.service.mail.sender;
 
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

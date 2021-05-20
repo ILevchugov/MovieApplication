@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 import ru.levchugov.notification.model.Email;
 import ru.levchugov.notification.model.EmailType;
 import ru.levchugov.notification.repository.UserRepository;
-import ru.levchugov.notification.service.mail.SendingStrategy;
+import ru.levchugov.notification.service.mail.sender.SendingStrategy;
 
 import java.util.Map;
 
@@ -18,7 +18,7 @@ public class SchedulingMailSendingService {
     private final Map<EmailType, SendingStrategy> sendingStrategies;
     private final UserRepository userRepository;
 
-    @Scheduled(fixedRate = 60000)
+   // @Scheduled(fixedRate = 60000)
     public void send() {
        userRepository.findAll().forEach(
                user -> sendingStrategies.get(EmailType.ADVERTISING).send(

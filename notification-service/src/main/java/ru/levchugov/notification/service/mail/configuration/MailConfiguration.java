@@ -3,7 +3,7 @@ package ru.levchugov.notification.service.mail.configuration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import ru.levchugov.notification.model.EmailType;
-import ru.levchugov.notification.service.mail.SendingStrategy;
+import ru.levchugov.notification.service.mail.sender.SendingStrategy;
 
 import java.util.List;
 import java.util.Map;

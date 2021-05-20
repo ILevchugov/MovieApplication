@@ -1,4 +1,4 @@
-package ru.levchugov.notification.service.mail;
+package ru.levchugov.notification.service.mail.sender;
 
 import ru.levchugov.notification.model.Email;
 import ru.levchugov.notification.model.EmailType;

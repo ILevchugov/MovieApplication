@@ -5,7 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import ru.levchugov.notification.model.Email;
 import ru.levchugov.notification.model.EmailType;
-import ru.levchugov.notification.service.mail.SendingStrategy;
+import ru.levchugov.notification.service.mail.sender.SendingStrategy;
 
 import java.util.Map;
 

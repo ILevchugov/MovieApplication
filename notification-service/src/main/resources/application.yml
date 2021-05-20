@@ -1,6 +1,7 @@
 server:
   port : 8070
-
+kafka:
+  server: localhost:29092
 spring:
   data:
     mongodb:
