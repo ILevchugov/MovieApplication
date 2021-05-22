@@ -11,10 +11,17 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document(collection = "users")
 public class User {
 
-    private final String name;
+    private String name;
 
-    private final String fullName;
+    private String fullName;
 
-    private final String email;
+    private String email;
+
+    //TODO: make class immutable, add @JsonCreator
+    public User() {
+        this.name = null;
+        this.fullName = null;
+        this.email = null;
+    }
 
 }

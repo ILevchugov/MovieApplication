@@ -7,11 +7,11 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document(collection = "mail_templates")
 public class MailTemplate {
 
-    private final String text;
+    private String text;
 
-    private final String subject;
+    private String subject;
 
-    private final EmailType emailType;
+    private EmailType emailType;
 
     //TODO: make class immutable, add @JsonCreator
     public MailTemplate() {
